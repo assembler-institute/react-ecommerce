@@ -1,0 +1,18 @@
+.product__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.shopping__cart__img {
+  width: 100%;
+  min-width: 4rem;
+  height: 100%;
+  border-radius: 0.125rem;
+  object-fit: cover;
+  background-position: center;
+}
