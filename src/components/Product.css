@@ -5,28 +5,27 @@
     width: 12rem;
     border: 2px solid black;
     margin-bottom: 1rem;
-  }
-  
-  .product__container_discount,
-  .product__container_title,
-  .product__container_description,
-  .product__container_rating,
-  .product__bottom_price,
-  .product__bottom_buttonAdd {
+}
+
+.product__container_discount,
+.product__container_title,
+.product__container_description,
+.product__container_rating,
+.product__bottom_price,
+.product__bottom_buttonAdd {
     padding: 0;
     margin: 0;
-  }
-  
-  .product__container_img {
-  padding: 0;
+}
+
+.product__container_img {
+    padding: 0;
     height: 10rem;
     width: 10rem;
-  }
-  
-  .product__bottom {
+}
+
+.product__bottom {
     display: flex;
     justify-content: space-between;
     padding: 0;
     height: 5rem;
-  }
-  
+}
