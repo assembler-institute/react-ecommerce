@@ -10,7 +10,7 @@ console.log(products);
     <>
       <h1>Bruce Lee!</h1>
       {products.map((item, index)=>{
-        return <Product key={index} title={item.title}/>
+        return <Product key={index} title={item.title} valoration={item.valoration} amount={item.amount} price={item.price} description={item.description} image={item.image}/>
       })}
       
     </>
