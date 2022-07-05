@@ -14,7 +14,7 @@ const Product = ({title, price, image, amount, valoration, description}) => {
 
       <div className='product__bottom'>
       <p className='product__bottom_price'>{price}</p>
-      <button className='product__bottom_buttonAdd'>Add</button>
+      <button className='product__bottom_buttonAdd'>Buy</button>
       </div>
 
     </div>

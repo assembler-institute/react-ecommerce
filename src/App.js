@@ -8,11 +8,12 @@ console.log(products);
   return (
       
     <>
+    <div className=''>
       <h1>Bruce Lee!</h1>
       {products.map((item, index)=>{
         return <Product key={index} title={item.title} valoration={item.valoration} amount={item.amount} price={item.price} description={item.description} image={item.image}/>
       })}
-      
+      </div>
     </>
   );
 }
