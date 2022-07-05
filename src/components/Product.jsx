@@ -1,11 +1,11 @@
 import './Product.css'
 
-const Product = () => {
+const Product = ({title}) => {
   return (
     <div className='product__container'>
       <span className='product__container_discount'>56%</span>
      <img className='product__container_img' src="https://bonik-react.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fflash-3.png&w=3840&q=75" alt="img" />
-     <p className='product__container_title'>Samsung</p>
+     <p className='product__container_title'>{title}</p>
       <span className='product__container_rating'>⭐️⭐️⭐️⭐️⭐️</span>
       <p className='product__container_description'>Description</p>
 
