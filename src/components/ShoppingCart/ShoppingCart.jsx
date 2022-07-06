@@ -7,8 +7,16 @@ const ShoppingCart = ({ cart, setCart }) => {
     <div className="main__cart">
       <h3>ShoppingCart</h3>
       <ul className="cart__list"></ul>
-      {cart.map((item, index)=>{
-        return <CartItem />
+      {cart.map((item, index) => {
+        return (
+          <CartItem
+            key={index}
+            id={item.cartId}
+            tite={item.cartTitle}
+            price={item.cartPrice}
+            image={item.cartImage}
+          />
+        );
       })}
       <div className="cart__buttom">
         <p className="cart__total">Total:</p>
