@@ -42,7 +42,7 @@ The `main` branch of the future repos will have the favourite class solution of 
 
 <img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/blob/main/src/img/repo/react-basics-classes-initial.png?raw=true' width='600'>
 
-Once you have installed the dependencies of the pill you will have to convert all the HTML code from the App.js file to React components such that the code is as reusable and modularized as possible.
+Once you have installed the dependencies of the pill you will need to start using components in a way that is as reusable and modularized as possible.
 
 Each UI element should be a React component, for example, buttons are UI elements that are reused in multiple places in the app so they should be extracted to React components.
 
