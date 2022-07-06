@@ -17,6 +17,6 @@
   border: 2px solid black;
   flex: 1;
 }
-.products_list{
-display: flex;
+.products_list {
+  display: flex;
 }

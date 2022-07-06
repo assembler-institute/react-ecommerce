@@ -12,26 +12,27 @@ function App() {
     <>
       <div className="main__app">
         <div className="main__products">
-        <h1>Bruce Lee!</h1>
-        <div className="products_list">
-        {products.map((item, index) => {
-          return (
-            <Product
-              key={index}
-              title={item.title}
-              valoration={item.valoration}
-              amount={item.amount}
-              price={item.price}
-              description={item.description}
-              image={item.image}
-              cart={buyShoppingCart}
-              setCart={setBuyShoppingCart}
-            />
-          );
-        })}
+          <h1>Bruce Lee!</h1>
+          <div className="products_list">
+            {products.map((item, index) => {
+              return (
+                <Product
+                  key={index}
+                  id={index}
+                  title={item.title}
+                  valoration={item.valoration}
+                  amount={item.amount}
+                  price={item.price}
+                  description={item.description}
+                  image={item.image}
+                  cart={buyShoppingCart}
+                  setCart={setBuyShoppingCart}
+                />
+              );
+            })}
+          </div>
         </div>
-        </div>
-        <ShoppingCart cart={buyShoppingCart} setCart={setBuyShoppingCart}/>
+        <ShoppingCart cart={buyShoppingCart} setCart={setBuyShoppingCart} />
       </div>
     </>
   );
