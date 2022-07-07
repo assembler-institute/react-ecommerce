@@ -1,6 +1,6 @@
-import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
 
+import Button from "@mui/material/Button";
 import "./Product.css";
 
 const Product = ({

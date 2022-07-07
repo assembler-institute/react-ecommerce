@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "@mui/material/Button";
 
+import Button from "@mui/material/Button";
 import "./CartItem.css";
 
 const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {

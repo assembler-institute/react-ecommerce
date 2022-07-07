@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Button } from "@mui/material";
 import { products } from "./data/products";
-
 import Product from "./components/Product/Product";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+
+import { Button } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 
@@ -11,7 +11,6 @@ import "./App.css";
 
 const initialShoppingCart =
   JSON.parse(localStorage.getItem("shoppingCart")) || [];
-
 function App() {
   const [buyShoppingCart, setBuyShoppingCart] = useState(initialShoppingCart);
   const [state, setState] = useState({
@@ -20,11 +19,9 @@ function App() {
     bottom: false,
     right: false,
   });
-
   useEffect(() => {
     localStorage.setItem("shoppingCart", JSON.stringify(buyShoppingCart));
   }, [buyShoppingCart]);
-
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -32,11 +29,9 @@ function App() {
     ) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
     console.log("Algoo");
   };
-
   return (
     <div className="main__app">
       <div className="main__products">
@@ -71,7 +66,6 @@ function App() {
         {/* {list(anchor)} */}
         <h1>Shopping Cart</h1>
         <Divider />
-
         <ShoppingCart cart={buyShoppingCart} setCart={setBuyShoppingCart} />
       </Drawer>
     </div>
