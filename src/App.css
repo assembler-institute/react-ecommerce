@@ -2,14 +2,21 @@
 
 .App {
   text-align: center;
-  border: 1 px solid black;
 }
 
 .main__app {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #000000;
+  border: 1px solid #9c9c9c;
   padding: 1rem;
+}
+.main__title{
+  color:whitesmoke;
+  text-align: center;
+  padding: 20px;
+  font-size: 41px;
+  font-family: 'Roboto';
+
 }
 .main__products {
   display: flex;
@@ -19,4 +26,5 @@
 }
 .products_list {
   display: flex;
+  justify-content: space-around;
 }

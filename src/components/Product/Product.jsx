@@ -12,6 +12,10 @@ const Product = ({
   cart,
   setCart,
 }) => {
+  /**
+   * When the addToCart function is called, the cart array is updated with the current state of the
+   * cart array, plus the new item that was added to the cart.
+   */
   const addToCart = () => {
     setCart([
       ...cart,
