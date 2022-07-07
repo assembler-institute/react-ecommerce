@@ -12,7 +12,7 @@ function App() {
     <>
       <div className="main__app">
         <div className="main__products">
-          <h1>Bruce Lee!</h1>
+          <h1 className="main___title">Bruce Lee!</h1>
           <div className="products_list">
             {products.map((item, index) => {
               return (
@@ -20,10 +20,10 @@ function App() {
                   key={index}
                   id={index}
                   title={item.title}
-                  valoration={item.valoration}
-                  amount={item.amount}
                   price={item.price}
                   description={item.description}
+                  valoration={item.valoration}
+                  amount={item.amount}
                   image={item.image}
                   cart={buyShoppingCart}
                   setCart={setBuyShoppingCart}

@@ -8,22 +8,23 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid #9c9c9c;
-  padding: 1rem;
+  margin: 1em;
 }
-.main__title{
-  color:whitesmoke;
+.main__title {
+  color: whitesmoke;
   text-align: center;
   padding: 20px;
   font-size: 41px;
-  font-family: 'Roboto';
-
+  font-family: "Roboto";
 }
+
 .main__products {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
   flex: 1;
 }
+
 .products_list {
   display: flex;
   justify-content: space-around;
