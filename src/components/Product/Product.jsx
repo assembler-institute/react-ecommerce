@@ -15,7 +15,7 @@ const Product = ({
   const addToCart = () => {
     setCart([
       ...cart,
-      { cartId: id, cardTitle: title, cartPrice: price, cartImage: image },
+      { cartId: id, cardTitle: title, cartPrice: price, cartImage: image, amount: 1 },
     ]);
   };
 
