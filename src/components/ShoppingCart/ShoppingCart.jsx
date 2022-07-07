@@ -1,12 +1,24 @@
-import "./ShoppingCart.css";
-import Button from "@mui/material/Button";
 import CartItem from "../CartItem/CartItem";
+import { useState, useEffect } from "react";
+
+import Button from "@mui/material/Button";
+import "./ShoppingCart.css";
 
 const ShoppingCart = ({ cart, setCart }) => {
-  console.log(cart);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    let totalPrice = 0;
+
+    cart.forEach((item) => {
+      totalPrice += item.cartPrice * item.amount;
+    });
+
+    setTotal(totalPrice);
+  }, [cart]);
+
   return (
     <div className="main__cart">
-      <h3 className="cart-title">Shopping Cart</h3>
       <ul className="cart__list">
         {cart.length === 0 ? (
           <p>No items in the cart</p>
@@ -20,7 +32,7 @@ const ShoppingCart = ({ cart, setCart }) => {
                   title={item.cartTitle}
                   price={item.cartPrice}
                   image={item.cartImage}
-                  cuantity={item.amount}
+                  quantity={item.amount}
                   cart={cart}
                   setCart={setCart}
                 />
@@ -31,7 +43,7 @@ const ShoppingCart = ({ cart, setCart }) => {
       </ul>
       <div className="cart__bottom">
         <p className="cart__total">Total:</p>
-        <p className="cart__total_price">€0</p>
+        <p className="cart__total_price">€{total}</p>
       </div>
       <Button variant="outlined" color="error" size="large">
         Checkout

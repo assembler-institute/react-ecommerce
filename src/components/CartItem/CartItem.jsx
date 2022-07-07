@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 
 import "./CartItem.css";
 
-const CartItem = ({ id, title, price, image, cart, setCart, cuantity }) => {
-  const [amount, setAmount] = useState(1);
+const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
+  const [amount, setAmount] = useState(quantity);
 
   const handleAdd = () => {
     setAmount(amount + 1);
