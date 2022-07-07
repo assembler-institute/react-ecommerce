@@ -22,7 +22,7 @@ const ShoppingCart = ({ cart, setCart }) => {
         <p className="cart__total">Total:</p>
         <p className="cart__totalPrice">$0</p>
       </div>
-      <button>Checkout</button>
+      <Button>Checkout</Button>
     </div>
   );
 };
