@@ -1,7 +1,7 @@
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
 
-import Button from "@mui/material/Button";
+
 import "./ShoppingCart.css";
 
 const ShoppingCart = ({ cart, setCart }) => {
@@ -45,9 +45,9 @@ const ShoppingCart = ({ cart, setCart }) => {
         <p className="cart__total">Total:</p>
         <p className="cart__total_price">€{total}</p>
       </div>
-      <Button variant="outlined" color="error" size="large">
+      <button variant="outlined" color="error" size="large">
         Checkout
-      </Button>
+      </button>
     </div>
   );
 };

@@ -3,9 +3,7 @@ import { products } from "./data/products";
 import Product from "./components/Product/Product";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
-import { Button } from "@mui/material";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
+
 
 import "./App.css";
 
@@ -36,7 +34,7 @@ function App() {
     <div className="main__app">
       <div className="main__products">
         <h1 className="main__title">Jean Claude Van Damme</h1>
-        <Button onClick={toggleDrawer("right", true)}>Open Menu</Button>
+        <button onClick={toggleDrawer("right", true)}>Open Menu</button>
         <div className="products_list">
           {products.map((item, index) => {
             return (
@@ -57,7 +55,7 @@ function App() {
           })}
         </div>
       </div>
-      <Drawer
+      <div
         className="test"
         anchor="right"
         open={state["right"]}
@@ -65,9 +63,10 @@ function App() {
       >
         {/* {list(anchor)} */}
         <h1>Shopping Cart</h1>
-        <Divider />
+        <divider />
+
         <ShoppingCart cart={buyShoppingCart} setCart={setBuyShoppingCart} />
-      </Drawer>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import { Card } from '@nextui-org/react';
 
-import Button from "@mui/material/Button";
 import "./Product.css";
 
 const Product = ({
@@ -57,11 +57,11 @@ const Product = ({
       <div className="product__bottom">
         <p className="product__bottom_price">€{price}</p>
         {added ? (
-          <Button disabled style={{ color: "white" }}>
+          <button disabled style={{ color: "white" }}>
             Added
-          </Button>
+          </button>
         ) : (
-          <Button
+          <button
             variant="outlined"
             color="error"
             size="large"
@@ -69,7 +69,7 @@ const Product = ({
             onClick={addToCart}
           >
             Add
-          </Button>
+          </button>
         )}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Button from "@mui/material/Button";
+
 import "./CartItem.css";
 
 const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
@@ -43,16 +43,16 @@ const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
         <p className="cart__item_title">{title}</p>
         <p className="cart__item_price">{price}</p>
         <div className="cart__item_bottom">
-          <Button variant="contained" className="" onClick={handleMinus}>
+          <button variant="contained" className="" onClick={handleMinus}>
             -
-          </Button>
+          </button>
           <p>{amount}</p>
-          <Button variant="contained" onClick={handleAdd}>
+          <button variant="contained" onClick={handleAdd}>
             +
-          </Button>
-          <Button variant="contained" onClick={handleRemove}>
+          </button>
+          <button variant="contained" onClick={handleRemove}>
             Remove
-          </Button>
+          </button>
         </div>
       </div>
     </div>
