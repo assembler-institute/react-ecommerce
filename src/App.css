@@ -1,7 +1,12 @@
-@import url("./assets/css/normalize.css");
+@import url("./assets/css/reset.css");
 
 .App {
   text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/img/lee.png");
+  filter:blur(px);
 }
 
 .main__app {
@@ -9,6 +14,7 @@
   justify-content: space-between;
   border: 1px solid #9c9c9c;
   margin: 1em;
+  height: 100vh;
 }
 .main__title {
   color: whitesmoke;
@@ -31,5 +37,5 @@
 }
 
 .MuiPaper-root {
-width: 20rem;
+  width: 20rem;
 }

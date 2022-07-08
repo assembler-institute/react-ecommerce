@@ -1,6 +1,6 @@
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
-
+import { Button } from "@nextui-org/react";
 
 import "./ShoppingCart.css";
 
@@ -45,9 +45,9 @@ const ShoppingCart = ({ cart, setCart }) => {
         <p className="cart__total">Total:</p>
         <p className="cart__total_price">€{total}</p>
       </div>
-      <button variant="outlined" color="error" size="large">
+      <Button light color="warning" auto>
         Checkout
-      </button>
+      </Button>
     </div>
   );
 };

@@ -80,7 +80,7 @@ const Product = ({
           </Col>
           <Col>
             <Row justify="flex-end">
-              <Button flat auto rounded color="secondary">
+              <Button color="warning" auto ghost>
                 <Text
                   css={{ color: "black" }}
                   size={12}

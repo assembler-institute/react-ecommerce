@@ -3,23 +3,32 @@ import { products } from "./data/products";
 import Product from "./components/Product/Product";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
-
-
+import { Text } from '@nextui-org/react';
 import "./App.css";
 
 const initialShoppingCart =
   JSON.parse(localStorage.getItem("shoppingCart")) || [];
 function App() {
   const [buyShoppingCart, setBuyShoppingCart] = useState(initialShoppingCart);
-  
+
   useEffect(() => {
     localStorage.setItem("shoppingCart", JSON.stringify(buyShoppingCart));
   }, [buyShoppingCart]);
- 
+
   return (
-    <div className="main__app">
+    <div className="main__app App">
       <div className="main__products">
-        <h1 className="main__title">Bruce Lee</h1>
+      <Text
+        h1
+        size={60}
+        css={{
+          textGradient: "45deg, $yellow600 -20%, #E79003 100%",
+          padding:"4rem"
+        }}
+        weight="bold"
+      >
+        Bruce Lee
+      </Text>
         <div className="products_list">
           {products.map((item, index) => {
             return (
@@ -33,7 +42,6 @@ function App() {
                 image={item.image}
                 cart={buyShoppingCart}
                 setCart={setBuyShoppingCart}
-                
               />
             );
           })}

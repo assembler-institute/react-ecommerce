@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-
+import { Button } from "@nextui-org/react";
 import "./CartItem.css";
 
 const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
@@ -43,16 +42,16 @@ const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
         <p className="cart__item_title">{title}</p>
         <p className="cart__item_price">{price}</p>
         <div className="cart__item_bottom">
-          <button variant="contained" className="" onClick={handleMinus}>
+          <Button light color="warning" auto onClick={handleMinus}>
             -
-          </button>
+          </Button>
           <p>{amount}</p>
-          <button variant="contained" onClick={handleAdd}>
+          <Button light color="warning" auto onClick={handleAdd}>
             +
-          </button>
-          <button variant="contained" onClick={handleRemove}>
+          </Button>
+          <Button light color="warning" auto onClick={handleRemove}>
             Remove
-          </button>
+          </Button>
         </div>
       </div>
     </div>
