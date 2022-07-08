@@ -1,29 +1,28 @@
 export const products = [
   {
-    title: "T-Shirt",
+    title: "Poster",
     price: 20,
     amount: 50,
     description: "Bruce Lee T-shirt Yellow Tee top, Material: Polyester",
-    image:
-      "https://www.thedota2store.com/media/catalog/product/cache/42ff4984ffd52745e8753c22ee11bc83/b/r/bruce-lee-t-shirt-yellow-tee-top_1.jpg",
+    image:"https://ih1.redbubble.net/image.2758362620.6887/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg",
     valoration: 8,
   },
   {
-    title: "Tote Bag",
+    title: "Bag",
     price: 30,
     amount: 30,
     description: "Vintage Bruce lee Tote Bag ",
     image:
-      "https://render.fineartamerica.com/images/rendered/default/tote-bag/images/artworkimages/medium/3/bruce-lee-ken-meyer-jr.jpg?&targetx=0&targety=-129&imagewidth=763&imageheight=1021&modelwidth=763&modelheight=763&backgroundcolor=120E23&orientation=0&producttype=totebag-18-18",
+      "https://cdn.shopify.com/s/files/1/0270/0555/0657/products/BRULEEDRAGDUFLBAG-2_1200x.jpg?v=1610454564",
     valoration: 7,
   },
   {
-    title: "Bruce Lee Sandbag",
+    title: "Sandbag",
     price: 10,
     amount: 20,
     description:
       "Bruce Lee punching bag - boxing bag (filled with chain), 70cm",
-    image: "https://m.media-amazon.com/images/I/71CV-uKMdOL._AC_SX679_.jpg",
+    image: "https://www.justathlete.es/media/catalog/product/cache/58/thumbnail/9df78eab33525d08d6e5fb8d27136e95/1/4/14BLSBO067.jpg",
     valoration: 10,
   },
   {
@@ -41,7 +40,7 @@ export const products = [
     amount: 150,
     description: "Nunchaku Bruce Lee. Material: Wood",
     image:
-      "https://www.dhresource.com/webp/m/0x0/f2/albu/g17/M00/92/DF/rBVa4l_mxWiAKpyoAAFiHQeMLDE216.jpg",
+      "https://cdn.webshopapp.com/shops/184325/files/95278907/enso-martial-arts-shop-yellow-bruce-lee-nunchaku.jpg",
     valoration: 7,
   },
 ];
