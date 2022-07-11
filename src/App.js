@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { products } from "./data/products";
 import Product from "./components/Product/Product";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+import Navbar from "./components/Navbar/Navbar.jsx"
 
 import { Text } from "@nextui-org/react";
 import "./App.css";
