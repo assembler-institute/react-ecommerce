@@ -1,41 +1,41 @@
 @import url("./assets/css/reset.css");
 
 .App {
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./assets/img/lee.png");
-  filter:blur(px);
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("./assets/img/lee.png");
+	filter: blur(px);
 }
 
 .main__app {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #9c9c9c;
-  margin: 1em;
-  height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #9c9c9c;
+	margin: 1em;
+	height: 100vh;
 }
 .main__title {
-  color: whitesmoke;
-  text-align: center;
-  padding: 20px;
-  font-size: 41px;
-  font-family: "Roboto";
+	color: whitesmoke;
+	text-align: center;
+	padding: 20px;
+	font-size: 41px;
+	font-family: "Roboto";
 }
 
 .main__products {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid black;
-  flex: 1;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+	flex: 1;
 }
 
 .products_list {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .MuiPaper-root {
-  width: 20rem;
+	width: 20rem;
 }
