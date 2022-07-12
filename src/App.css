@@ -1,18 +1,18 @@
 @import url("./assets/css/reset.css");
 
 .App {
-	text-align: center;
+  text-align: center;
 }
 
 .main__app {
-	display: flex;
-	height: 5vh;
-	border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
 }
 
 .navbar__container {
-	display: flex;
-	height: 5vh;
-	width: 100%;
-	border: 2px solid black;
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  border: 2px solid black;
 }

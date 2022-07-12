@@ -5,7 +5,7 @@ import Router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<NextUIProvider>
-		<Router />
-	</NextUIProvider>,
+  <NextUIProvider>
+    <Router />
+  </NextUIProvider>
 );

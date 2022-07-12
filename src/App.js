@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import Catalog from "./components/Store/Catalog/Catalog";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="main__app">
       <Navbar />
+      <Catalog />
     </div>
   );
 }
