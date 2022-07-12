@@ -2,17 +2,17 @@
 
 .App {
 	text-align: center;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url("./assets/img/lee.png");
-	filter: blur(px);
 }
 
 .main__app {
 	display: flex;
-	justify-content: space-between;
-	border: 1px solid #9c9c9c;
-	margin: 1em;
-	height: 100vh;
+	height: 5vh;
+	border: 2px solid black;
+}
+
+.navbar__container {
+	display: flex;
+	height: 5vh;
+	width: 100%;
+	border: 2px solid black;
 }
