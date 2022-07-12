@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import "./CartItem.css";
 
-const CartItem = ( {id, title, price, image, cart, setCart, quantity}) => {
+const CartItem = ({ id, title, price, image, cart, setCart, quantity }) => {
 	const [amount, setAmount] = useState(quantity);
 
 	const handleAdd = () => {
