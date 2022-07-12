@@ -46,15 +46,13 @@ const Product = ({
             New
           </Text>
           <Text h3 color="#CE7500" size={20} weight="bold">
-            {/* {title} */}
-            Test Title
+            {title}
           </Text>
         </Col>
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
         <Card.Image
-          // src={image}
-          src=""
+          src={image}
           width="100%"
           height="100%"
           objectFit="cover"
@@ -77,7 +75,7 @@ const Product = ({
               Available soon.
             </Text>
             <Text color="#000" size={20}>
-              € {90}
+              € {price}
             </Text>
           </Col>
           <Col>
