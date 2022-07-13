@@ -1,3 +1,5 @@
+//* Cart component that renderizes CartItem component.
+
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
@@ -7,20 +9,20 @@ import "./ShoppingCart.css";
 const ShoppingCart = ({ cart, setCart }) => {
 	const [total, setTotal] = useState(0);
 
-	useEffect(() => {
-		let totalPrice = 0;
+	// useEffect(() => {
+	// 	let totalPrice = 0;
 
-		cart.forEach((item) => {
-			totalPrice += item.cartPrice * item.amount;
-		});
+	// 	cart.forEach((item) => {
+	// 		totalPrice += item.cartPrice * item.amount;
+	// 	});
 
-		setTotal(totalPrice);
-	}, [cart]);
+	// 	setTotal(totalPrice);
+	// }, [cart]);
 
 	return (
 		<div className='main__cart'>
 			<ul className='cart__list'>
-				{cart.length === 0 ? (
+				{/* {cart.length === 0 ? (
 					<p>No items in the cart</p>
 				) : (
 					<div>
@@ -39,13 +41,13 @@ const ShoppingCart = ({ cart, setCart }) => {
 							);
 						})}
 					</div>
-				)}
+				)} */}
 			</ul>
 			<div className='cart__bottom'>
 				<p className='cart__total'>Total:</p>
 				<p className='cart__total_price'>€{total}</p>
 			</div>
-			<Button light color='warning' auto>
+			<Button bordered color='warning' auto>
 				Checkout
 			</Button>
 		</div>
