@@ -1,8 +1,9 @@
 import { Popover, Button } from "@nextui-org/react";
+import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
 
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ shoppingCart, setShoppingCart }) => {
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
@@ -17,11 +18,16 @@ const Navbar = () => {
 			<div className='navbar__container_icons'>
 				<Popover>
 					<Popover.Trigger>
-						<Button auto flat>
-							Add
+						<Button auto ghost>
+							Cart
 						</Button>
 					</Popover.Trigger>
-					<Popover.Content>🥳</Popover.Content>
+					<Popover.Content css={{ width: "max-content" }}>
+						<ShoppingCart
+							shoppingCart={shoppingCart}
+							setShoppingCart={setShoppingCart}
+						/>
+					</Popover.Content>
 				</Popover>
 			</div>
 		</div>

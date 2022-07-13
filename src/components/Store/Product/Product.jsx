@@ -2,12 +2,10 @@
 //? We call useState and useEffect hooks from "react",Library.
 //? We call Card, Col, Row, Button, Text from "@nextui-org/react",Library
 
-
 import { useState, useEffect } from "react";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import "./Product.css";
 
-/* A function that is receiving props from the parent component. */
 const Product = ({
 	id,
 	title,
@@ -15,26 +13,40 @@ const Product = ({
 	image,
 	valoration,
 	description,
-	cart,
-	setCart,
+	shoppingCart,
+	setShoppingCart,
 	menuState,
 	setMenu,
 }) => {
-	const [added, setAdded] = useState(false);
+	const [itemAdded, setItemAdded] = useState(false);
+
+	// const addToCart = () => {
+	//   setCart([
+	//     ...cart,
+	//     {
+	//       cartId: id,
+	//       cardTitle: title,
+	//       cartPrice: price,
+	//       cartImage: image,
+	//       amount: 1,
+	//     },
+	//   ]);
+	//   setAdded(true);
+	//   setMenu({ ...menuState, right: true });
+	// };
 
 	const addToCart = () => {
-		setCart([
-			...cart,
+		setShoppingCart([
+			...shoppingCart,
 			{
-				cartId: id,
-				cardTitle: title,
-				cartPrice: price,
-				cartImage: image,
-				amount: 1,
+				itemId: id,
+				itemTitle: title,
+				itemPrice: price,
+				itemImage: image,
+				itemQuantity: 1,
 			},
 		]);
-		setAdded(true);
-		setMenu({ ...menuState, right: true });
+		setItemAdded(true);
 	};
 
 	//   useEffect(() => {

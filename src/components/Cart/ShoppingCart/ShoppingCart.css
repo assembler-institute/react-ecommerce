@@ -1,9 +1,8 @@
 .main__cart {
-	border: 1px solid #414141;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	color: whitesmoke;
+	color: black;
 	padding: 20px;
 }
 .cart-title {
@@ -17,10 +16,10 @@
 }
 
 .cart__total {
-	text-align: end;
+	text-align: start;
 	border-top: solid 1px #515151;
 	padding-top: 10px;
 }
 .cart__total_price {
-	text-align: end;
+	text-align: start;
 }

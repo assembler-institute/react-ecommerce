@@ -7,7 +7,7 @@ import Product from "../Product/Product";
 
 import "./Catalog.css";
 
-const Catalog = () => {
+const Catalog = ({ shoppingCart, setShoppingCart }) => {
 	const [products, setSaveProducts] = useState([]);
 
 	useEffect(() => {
@@ -22,7 +22,17 @@ const Catalog = () => {
 	return (
 		<div className='catalog__container'>
 			{products.map(({ id, title, price, image }) => {
-				return <Product key={id} title={title} price={price} image={image} />;
+				return (
+					<Product
+						key={id}
+						id={id}
+						title={title}
+						price={price}
+						image={image}
+						shoppingCart={shoppingCart}
+						setShoppingCart={setShoppingCart}
+					/>
+				);
 			})}
 		</div>
 	);
