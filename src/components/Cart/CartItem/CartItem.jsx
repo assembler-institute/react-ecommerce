@@ -1,49 +1,40 @@
 //*
 //?
-import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import "./CartItem.css";
 
 const CartItem = ({
-	imteId,
+	itemId,
 	itemTitle,
 	itemPrice,
 	itemImage,
-	cart,
-	setCart,
+	shoppingCart,
+	setShoppingCart,
 	itemQuantity,
 }) => {
-	// const [amount, setAmount] = useState(quantity);
+	const restQuantityItem = () => {
+		if (itemQuantity === 1) return;
+		shoppingCart.forEach((item) => {
+			if (item.itemId === itemId) {
+				item.itemQuantity -= 1;
+			}
+		});
+		setShoppingCart([...shoppingCart]);
+	};
 
-	// const handleAdd = () => {
-	//   setAmount(amount + 1);
+	const addQuantityItem = () => {
+		shoppingCart.forEach((item) => {
+			if (item.itemId === itemId) {
+				item.itemQuantity += 1;
+			}
+		});
+		setShoppingCart([...shoppingCart]);
+	};
 
-	//   cart.forEach((item) => {
-	//     if (item.cartId === id) {
-	//       item.amount = amount + 1;
-	//     }
-	//   });
-
-	//   setCart([...cart]);
-	// };
-
-	// const handleMinus = () => {
-	//   if (amount === 1) return;
-	//   setAmount(amount - 1);
-
-	//   cart.forEach((item) => {
-	//     if (item.cartId === id) {
-	//       item.amount = amount - 1;
-	//     }
-	//   });
-
-	//   setCart([...cart]);
-	// };
-
-	// const handleRemove = () => {
-	//   const newCart = cart.filter((item) => item.cartId !== id);
-	//   setCart(newCart);
-	// };
+	const itemRemove = () => {
+		const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
+		setShoppingCart(newCart);
+	};
 
 	return (
 		<div className='cart__item'>
@@ -52,15 +43,14 @@ const CartItem = ({
 				<p className='cart__item_title'>{itemTitle}</p>
 				<p className='cart__item_price'>€ {itemPrice}</p>
 				<div className='cart__item_bottom'>
-					<Button light color='error' auto>
+					<Button light color='error' auto onClick={restQuantityItem}>
 						-
 					</Button>
-					{/* <p>{amount}</p> */}
-					<p>1</p>
-					<Button light color='error' auto>
+					<p>{itemQuantity}</p>
+					<Button light color='error' auto onClick={addQuantityItem}>
 						+
 					</Button>
-					<Button light color='error' auto>
+					<Button light color='error' auto onClick={itemRemove}>
 						Remove
 					</Button>
 				</div>
