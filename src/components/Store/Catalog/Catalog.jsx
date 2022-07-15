@@ -10,14 +10,15 @@ import "./Catalog.css";
 const Catalog = ({ shoppingCart, setShoppingCart }) => {
 	const [products, setSaveProducts] = useState([]);
 
+	const url = "http://localhost:3001/products";
 	useEffect(() => {
 		const fetchProducts = async () => {
-			const response = await fetch("http://localhost:3001/products");
+			const response = await fetch(url);
 			const data = await response.json();
 			setSaveProducts(data);
 		};
 		fetchProducts();
-	}, []);
+	}, [url]);
 
 	return (
 		<div className='catalog__container'>
