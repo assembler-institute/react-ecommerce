@@ -11,13 +11,17 @@ const Catalog = ({ shoppingCart, setShoppingCart }) => {
 	const [products, setSaveProducts] = useState([]);
 
 	const url = "http://localhost:3001/products";
+
 	useEffect(() => {
+		try {
 		const fetchProducts = async () => {
 			const response = await fetch(url);
 			const data = await response.json();
-			setSaveProducts(data);
+			setSaveProducts(data);}
+			fetchProducts();
+		} catch(error) {
+			console.log(error);
 		};
-		fetchProducts();
 	}, [url]);
 
 	return (
