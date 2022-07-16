@@ -13,5 +13,4 @@ root.render(
 	</NextUIProvider>,
 );
 
-
 //BrowserRouter, learn how to use.

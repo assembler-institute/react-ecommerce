@@ -14,14 +14,15 @@ const Catalog = ({ shoppingCart, setShoppingCart }) => {
 
 	useEffect(() => {
 		try {
-		const fetchProducts = async () => {
-			const response = await fetch(url);
-			const data = await response.json();
-			setSaveProducts(data);}
+			const fetchProducts = async () => {
+				const response = await fetch(url);
+				const data = await response.json();
+				setSaveProducts(data);
+			};
 			fetchProducts();
-		} catch(error) {
+		} catch (error) {
 			console.log(error);
-		};
+		}
 	}, [url]);
 
 	return (
