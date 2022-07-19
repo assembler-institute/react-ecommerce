@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Catalog from "./components/Store/Catalog/Catalog";
 import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
 import Services from "./components/Footer/Services/Services"
-import Footer from "./components/Footer/BottonPage/Footer";
+import BottomSection from "./components/Footer/BottomSection/BottomSection";
 
 import "./App.css";
 
@@ -22,7 +22,7 @@ function App() {
 			<Catalog shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
       <ShippingBanner />
       <Services />
-			<Footer />
+			<BottomSection />
 		</div>
 	);
 }

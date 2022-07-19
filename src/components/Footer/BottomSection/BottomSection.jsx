@@ -1,6 +1,6 @@
-import "./Footer.css";
+import "./BottomSection.css";
 
-const Footer = () => {
+const BottomSection = () => {
 	return (
 		<div className='footer__container'>
 			<p>Copyright &copy; Squad Berners-Lee.</p>
@@ -14,4 +14,4 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
+export default BottomSection;
