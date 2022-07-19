@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import { LoginVerification } from "../utils/utils";
+import { useNavigate } from "react-router";
 
 export default function LoginPlain() {
 	const [username, setUsername] = useState("");
@@ -10,20 +11,24 @@ export default function LoginPlain() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const navigator = useNavigate();
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		setIsLoggedIn(false);
 		setError("");
+    
+  
 
 		try {
 			await LoginVerification({ username, password });
-     // await console.log(LoginVerification(username, password));
+			// await console.log(LoginVerification(username, password));
 			setIsLoggedIn(true);
 			setUsername("");
 			setPassword("");
 			setError("");
-
+			navigator("/");
+	
 		} catch (error) {
 			// do no thing for now
 			setError("Incorrect username or password!");
@@ -37,16 +42,14 @@ export default function LoginPlain() {
 			<div className='Login-container'>
 				{isLoggedIn ? (
 					<>
-
 						<h1> Hello {username}!</h1>{" "}
-
 						<button
 							onClick={() => {
 								setIsLoggedIn(false);
-							}}>
+							}}
+						>
 							Log Out
 						</button>
-
 					</>
 				) : (
 					<form className='form' onSubmit={onSubmit}>
@@ -56,7 +59,7 @@ export default function LoginPlain() {
 						<input
 							type='text'
 							placeholder='username'
-              autoComplete='new-username'
+							autoComplete='new-username'
 							value={username}
 							onChange={(e) => setUsername(e.currentTarget.value)}
 						/>
@@ -71,7 +74,6 @@ export default function LoginPlain() {
 						<button className='submit' type='submit' disabled={isLoading}>
 							{isLoading ? "Logging in..." : "Login In"}
 						</button>
-
 					</form>
 				)}
 			</div>

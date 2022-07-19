@@ -11,6 +11,10 @@
 	margin-left: 2rem;
 }
 
-.navbar__container_icon {
+.navbar__container_icons {
+	display: flex;
+	flex-direction: row;
 	margin-right: 2rem;
+	gap: 1rem;
+
 }
