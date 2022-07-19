@@ -35,34 +35,15 @@ const Product = ({
 	};
 
 	useEffect(() => {
-		shoppingCart.forEach((ShoppingCartProduct) => {
-			if (ShoppingCartProduct.itemId === id) {
-				setItemAdded(true);
-			}
-		});
-	}, []);
-
-	useEffect(() => {
-		shoppingCart.forEach((product) => {
+		const resutl = shoppingCart.some((product) => {
 			if (product.itemId === id) {
-				setItemAdded(true);
+				return true;
 			}
+			return false;
 		});
-	}, [shoppingCart, id]);
-
-	useEffect(() => {
-		// shoppingCart.forEach((product) => {
-		// 	if (product.itemId !== id) {
-		// 		setItemAdded(false);
-		// 	}
-		// });
-		const result = shoppingCart.find((product) => product.id !== id);
-		console.log(result);
-	}, [shoppingCart, id]);
-
-	// useEffect(() => {
-	//   shoppingCart.find((product) => product.id !== id) && setItemAdded(false);
-	//   }, [shoppingCart, id]);
+		resutl && setItemAdded(true);
+		!resutl && setItemAdded(false);
+	}, [id, shoppingCart]);
 
 	return (
 		<Card css={{ w: "15%", h: "330px" }}>

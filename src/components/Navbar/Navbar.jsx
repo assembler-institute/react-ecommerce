@@ -1,6 +1,7 @@
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
-import { Popover, User, Button, Grid } from "@nextui-org/react";
-import { GiSharpShuriken, GiShoppingCart } from "react-icons/gi";
+import { Popover, User, Button } from "@nextui-org/react";
+import Heart from "../../assets/icons/Heart2.svg";
+import Buy from "../../assets/icons/Buy.svg";
 import { UserTwitterCard } from "./Avatar/Avatar";
 import "./Navbar.css";
 
@@ -34,7 +35,8 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-						<GiShoppingCart size='90px' />
+          <Button icon={<img src={Buy} alt="icon" classname="icon-heart" />}
+          color="error" light ></Button>
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
 						<ShoppingCart
@@ -46,11 +48,10 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-						<GiSharpShuriken size='90px' />
+          <Button icon={<img src={Heart} alt="icon" classname="icon-heart" />}
+          color="error" light ></Button>
 					</Popover.Trigger>
-					<Popover.Content css={{ width: "max-content" }}>
-						<h1>Shuriken</h1>
-					</Popover.Content>
+					<Popover.Content css={{ width: "max-content" }}></Popover.Content>
 				</Popover>
 			</div>
 		</div>
