@@ -19,9 +19,6 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 			</div>
 			<div className='navbar__container_icons'>
 				<Popover>
-					<Popover.Content></Popover.Content>
-				</Popover>
-				<Popover>
 					<Popover.Trigger>
 						<User
 							as='button'
@@ -37,7 +34,7 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-						<GiShoppingCart size='90px'/>
+						<GiShoppingCart size='90px' />
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
 						<ShoppingCart
@@ -49,9 +46,11 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-						<GiSharpShuriken size='90px'/>
+						<GiSharpShuriken size='90px' />
 					</Popover.Trigger>
-					<Popover.Content css={{ width: "max-content" }}></Popover.Content>
+					<Popover.Content css={{ width: "max-content" }}>
+						<h1>Shuriken</h1>
+					</Popover.Content>
 				</Popover>
 			</div>
 		</div>
