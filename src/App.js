@@ -18,6 +18,7 @@ function App() {
 		<div className='main__app'>
 			<Navbar shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
 			<Catalog shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
+			
 			<Footer />
 		</div>
 	);

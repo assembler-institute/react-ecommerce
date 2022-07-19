@@ -1,12 +1,14 @@
 import { Popover, Button } from "@nextui-org/react";
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
 
+
 import "./Navbar.css";
 
 const Navbar = ({ shoppingCart, setShoppingCart }) => {
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
+			{/* <Navbar /> */}
 			<div className='navbar__container_links'>
 				<span className='navbar__container_link'>DEMO</span>
 				<span className='navbar__container_link'>SHOP</span>
