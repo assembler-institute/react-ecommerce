@@ -1,11 +1,12 @@
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
+import Wishlist from "../Cart/Wishlist/Wishlist";
 import { Popover, User, Button } from "@nextui-org/react";
 import Heart from "../../assets/icons/Heart2.svg";
 import Buy from "../../assets/icons/Buy.svg";
 import { UserTwitterCard } from "./Avatar/Avatar";
 import "./Navbar.css";
 
-const Navbar = ({ shoppingCart, setShoppingCart }) => {
+const Navbar = ({ shoppingCart, setShoppingCart, wishlistCart,setWishlistCart }) => {
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
@@ -50,7 +51,12 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
           <Button icon={<img src={Heart} alt="icon" className="icon-heart" />}
           color="error" light ></Button>
 					</Popover.Trigger>
-					<Popover.Content css={{ width: "max-content" }}></Popover.Content>
+					<Popover.Content css={{ width: "max-content" }}>
+            <Wishlist
+            wishlistCart={wishlistCart}
+            setWishlist={setWishlistCart}
+            />
+          </Popover.Content>
 				</Popover>
 			</div>
 		</div>

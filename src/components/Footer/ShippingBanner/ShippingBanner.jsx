@@ -16,7 +16,7 @@ const ShippingBanner = () => {
 				{" "}
 				<FaShoppingBag size='6rem' color='black' />{" "}
 			</span>
-			<span>FREE SHIPPING ON ANY ORDER ABOVE 50$</span>
+			<span>FREE SHIPPING ON ANY ORDER ABOVE 50€</span>
 		</div>
 	);
 };
