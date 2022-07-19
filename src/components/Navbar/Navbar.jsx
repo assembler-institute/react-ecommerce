@@ -9,7 +9,6 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
-			{/* <Navbar /> */}
 			<div className='navbar__container_links'>
 				<span className='navbar__container_link'>DEMO</span>
 				<span className='navbar__container_link'>SHOP</span>
@@ -35,7 +34,7 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-          <Button icon={<img src={Buy} alt="icon" classname="icon-heart" />}
+          <Button icon={<img src={Buy} alt="icon" className="icon-heart" />}
           color="error" light ></Button>
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
@@ -48,7 +47,7 @@ const Navbar = ({ shoppingCart, setShoppingCart }) => {
 
 				<Popover>
 					<Popover.Trigger>
-          <Button icon={<img src={Heart} alt="icon" classname="icon-heart" />}
+          <Button icon={<img src={Heart} alt="icon" className="icon-heart" />}
           color="error" light ></Button>
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}></Popover.Content>
