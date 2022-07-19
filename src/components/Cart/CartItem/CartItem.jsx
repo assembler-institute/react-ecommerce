@@ -35,6 +35,7 @@ const CartItem = ({
 		const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
 		setShoppingCart(newCart);
 	};
+	
 
 	return (
 		<div className='cart__item'>

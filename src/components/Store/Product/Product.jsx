@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from "react";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import Heart from "../../../assets/icons/Heart2.svg";
 import "./Product.css";
 
 const Product = ({
@@ -15,6 +16,8 @@ const Product = ({
 	description,
 	shoppingCart,
 	setShoppingCart,
+	wishlistCart,
+	setWishlistCart,
 	menuState,
 	setMenu,
 }) => {
@@ -23,6 +26,19 @@ const Product = ({
 	const addToCart = () => {
 		setShoppingCart([
 			...shoppingCart,
+			{
+				itemId: id,
+				itemTitle: title,
+				itemPrice: price,
+				itemImage: image,
+				itemQuantity: 1,
+			},
+		]);
+		// setItemAdded(true);
+	};
+	const addToWishlistCart = () => {
+		setWishlistCart([
+			...wishlistCart,
 			{
 				itemId: id,
 				itemTitle: title,
@@ -52,6 +68,8 @@ const Product = ({
 					<Text size={12} weight='bold' transform='uppercase' color='#ffffffAA'>
 						New
 					</Text>
+					<Button icon={<img src={Heart} alt="icon" className="icon-heart" />}
+          color="error" light onClick={addToWishlistCart} ></Button>
 					<Text h3 color='#CE7500' size={20} weight='bold'>
 						{title}
 					</Text>

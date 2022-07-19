@@ -7,7 +7,7 @@ import Product from "../Product/Product";
 
 import "./Catalog.css";
 
-const Catalog = ({ shoppingCart, setShoppingCart }) => {
+const Catalog = ({ shoppingCart, setShoppingCart, wishlistCart, setWishlistCart }) => {
 	const [products, setSaveProducts] = useState([]);
 
 	const url = "http://localhost:3001/products";
@@ -37,6 +37,8 @@ const Catalog = ({ shoppingCart, setShoppingCart }) => {
 						image={image}
 						shoppingCart={shoppingCart}
 						setShoppingCart={setShoppingCart}
+						wishlistCart={wishlistCart}
+						setWishlistCart={setWishlistCart}
 					/>
 				);
 			})}
