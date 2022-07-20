@@ -1,26 +1,18 @@
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Tooltip } from "@nextui-org/react";
 
 import "./Wishlist.css";
 
+const Wishlist = ({ wishlistCart, setWishlistCart }) => {
+	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
+	useEffect(() => {
+		let totalOfWhislistArrayItems = wishlistCart.length;
+		setTotalItemWishlist(totalOfWhislistArrayItems);
+	}, [wishlistCart]);
 
-
-
-
-
-const Wishlist = ({wishlistCart,setWishlistCart}) => {
-const [totalItemWishlist, setTotalItemWishlist] = useState(0);
-
-useEffect(()=>{
-  let totalOfWhislistArrayItems = wishlistCart.length
-  setTotalItemWishlist(totalOfWhislistArrayItems)
-  
-},[wishlistCart]);
-
-
-return (
+	return (
 		<div className='main__cart'>
 			<h3>Whislist Cart</h3>
 			<ul className='cart__list'>
@@ -37,6 +29,7 @@ return (
 									itemQuantity={itemQuantity}
 									wishlistCart={wishlistCart}
 									setWishlistCart={setWishlistCart}
+									wish={true}
 								/>
 							);
 						},
@@ -46,13 +39,17 @@ return (
 				)}
 			</ul>
 			<div className='cart__bottom'>
-				<p className='cart__total'>Total:</p>
-				<p className='cart__total_price'>€{}</p>
+				<Tooltip
+					placement='bottom'
+					content='Your Total Love List'
+					color='warning'
+				>
+					<Button flat auto color='warning'>
+						{totalItemWishlist}
+					</Button>
+				</Tooltip>
 			</div>
-			<Button bordered color='warning' auto>
-				Checkout
-			</Button>
 		</div>
 	);
-}
+};
 export default Wishlist;

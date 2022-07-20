@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { LoginVerification } from "../utils/utils";
 import { useNavigate } from "react-router";
+import { Loading } from "@nextui-org/react";
 
 export default function LoginPlain() {
 	const [username, setUsername] = useState("");
@@ -55,7 +56,6 @@ export default function LoginPlain() {
 					<form className='form' onSubmit={onSubmit}>
 						{error && <p className='error'>{error}</p>}
 						<p>Please Login!</p>
-
 						<input
 							type='text'
 							placeholder='username'
@@ -70,7 +70,6 @@ export default function LoginPlain() {
 							value={password}
 							onChange={(e) => setPassword(e.currentTarget.value)}
 						/>
-
 						<button className='submit' type='submit' disabled={isLoading}>
 							{isLoading ? "Logging in..." : "Login In"}
 						</button>

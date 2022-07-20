@@ -11,6 +11,9 @@ const CartItem = ({
 	shoppingCart,
 	setShoppingCart,
 	itemQuantity,
+	wish,
+	wishlistCart,
+	setWishlistCart,
 }) => {
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;
@@ -32,10 +35,17 @@ const CartItem = ({
 	};
 
 	const itemRemove = () => {
-		const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
-		setShoppingCart(newCart);
+		if (wish) {
+			const newWishList = wishlistCart.filter(
+				(wishItem) => wishItem.itemId !== itemId,
+			);
+			setWishlistCart(newWishList);
+
+		} else {
+			const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
+			setShoppingCart(newCart);
+		}
 	};
-	
 
 	return (
 		<div className='cart__item'>
@@ -44,13 +54,22 @@ const CartItem = ({
 				<p className='cart__item_title'>{itemTitle}</p>
 				<p className='cart__item_price'>€ {itemPrice}</p>
 				<div className='cart__item_bottom'>
-					<Button light color='error' auto onClick={restQuantityItem}>
-						-
-					</Button>
-					<p>{itemQuantity}</p>
-					<Button light color='error' auto onClick={addQuantityItem}>
-						+
-					</Button>
+					{wish ? (
+						<Button light color='error' auto>
+							Add to Cart
+						</Button>
+					) : (
+						<>
+							<Button light color='error' auto onClick={restQuantityItem}>
+								-
+							</Button>
+							<p>{itemQuantity}</p>
+							<Button light color='error' auto onClick={addQuantityItem}>
+								+
+							</Button>
+						</>
+					)}
+
 					<Button light color='error' auto onClick={itemRemove}>
 						Remove
 					</Button>
