@@ -40,11 +40,37 @@ const CartItem = ({
 				(wishItem) => wishItem.itemId !== itemId,
 			);
 			setWishlistCart(newWishList);
-
 		} else {
 			const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
 			setShoppingCart(newCart);
 		}
+	};
+
+	const checkShoppingCart = () => {
+		let noItemInShoppingCart = false;
+		shoppingCart.forEach((item) => {
+			if (item.itemId === itemId) {
+				noItemInShoppingCart = true;
+			}
+		});
+		console.log(noItemInShoppingCart);
+		return noItemInShoppingCart;
+	};
+
+	//*  When the user clicks the add to cart button, add the item to the shopping cart and remove the item from the wishlistCart.
+	const addToShoppingCart = () => {
+		if (checkShoppingCart()) return;
+		setShoppingCart([
+			...shoppingCart,
+			{
+				itemId: itemId,
+				itemTitle: itemTitle,
+				itemPrice: itemPrice,
+				itemImage: itemImage,
+				itemQuantity: 1,
+			},
+		]);
+		itemRemove();
 	};
 
 	return (
@@ -55,7 +81,7 @@ const CartItem = ({
 				<p className='cart__item_price'>€ {itemPrice}</p>
 				<div className='cart__item_bottom'>
 					{wish ? (
-						<Button light color='error' auto>
+						<Button light color='error' auto onClick={addToShoppingCart}>
 							Add to Cart
 						</Button>
 					) : (
