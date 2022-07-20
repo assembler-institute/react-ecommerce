@@ -6,7 +6,12 @@ import Buy from "../../assets/icons/Buy.svg";
 import { UserTwitterCard } from "./Avatar/Avatar";
 import "./Navbar.css";
 
-const Navbar = ({ shoppingCart, setShoppingCart, wishlistCart,setWishlistCart }) => {
+const Navbar = ({
+	shoppingCart,
+	setShoppingCart,
+	wishlistCart,
+	setWishlistCart,
+}) => {
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
@@ -35,8 +40,11 @@ const Navbar = ({ shoppingCart, setShoppingCart, wishlistCart,setWishlistCart })
 
 				<Popover>
 					<Popover.Trigger>
-          <Button icon={<img src={Buy} alt="icon" className="icon-heart" />}
-          color="error" light ></Button>
+						<Button
+							icon={<img src={Buy} alt='icon' className='icon-heart' />}
+							color='error'
+							light
+						></Button>
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
 						<ShoppingCart
@@ -48,15 +56,20 @@ const Navbar = ({ shoppingCart, setShoppingCart, wishlistCart,setWishlistCart })
 
 				<Popover>
 					<Popover.Trigger>
-          <Button icon={<img src={Heart} alt="icon" className="icon-heart" />}
-          color="error" light ></Button>
+						<Button
+							icon={<img src={Heart} alt='icon' className='icon-heart' />}
+							color='error'
+							light
+						></Button>
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
-            <Wishlist
-            wishlistCart={wishlistCart}
-            setWishlistCart={setWishlistCart}
-            />
-          </Popover.Content>
+						<Wishlist
+							wishlistCart={wishlistCart}
+							setWishlistCart={setWishlistCart}
+							shoppingCart={shoppingCart}
+							setShoppingCart={setShoppingCart}
+						/>
+					</Popover.Content>
 				</Popover>
 			</div>
 		</div>
