@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Catalog from "./components/Store/Catalog/Catalog";
 import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
 import Services from "./components/Footer/Services/Services";
 import BottomSection from "./components/Footer/BottomSection/BottomSection";
-
 import "./App.css";
 
 

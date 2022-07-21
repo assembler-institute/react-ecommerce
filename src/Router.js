@@ -29,7 +29,7 @@ const Router = () => {
 				<Route path='/' element={<App />} />
 			</Routes>
 			<Routes>
-				<Route path='/login' element={<Login />} />
+				<Route path='./components/Login/Login.jsx' element={<Login />} />
 			</Routes>
 		</BrowserRouter>
 	);
