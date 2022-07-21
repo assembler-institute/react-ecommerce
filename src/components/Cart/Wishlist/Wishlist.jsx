@@ -1,9 +1,7 @@
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
 import { Button, Tooltip } from "@nextui-org/react";
-
 import "./Wishlist.css";
-
 
 const Wishlist = ({
 	wishlistCart,

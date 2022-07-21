@@ -55,7 +55,6 @@ export const UserTwitterCard = () => {
 					</Text>
 				</Grid>
 			</Grid.Container>
-
 			<Grid.Container
 				className='user-twitter-card__metrics-container'
 				justify='flex-start'

@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import "./ShoppingCart.css";
 
-
-
 const ShoppingCart = ({
 	shoppingCart,
 	setShoppingCart,

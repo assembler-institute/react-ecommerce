@@ -10,9 +10,6 @@ const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
 const wishlistStorage = JSON.parse(localStorage.getItem("saveWishCache")) || [];
 const userCacheStorage = JSON.parse(localStorage.getItem("userCache")) || {};
 
-//* The App function is the main component of the application. It holds the state of the shopping cart
-//* and wishlist cart, and passes them down to the Navbar and Catalog components.
-//* @returns The return is the JSX that will be rendered to the DOM.
 
 function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);

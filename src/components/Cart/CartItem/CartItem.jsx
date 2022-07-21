@@ -14,7 +14,6 @@ const CartItem = ({
 	wishlistCart,
 	setWishlistCart,
 }) => {
-
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;
 		shoppingCart.forEach((item) => {

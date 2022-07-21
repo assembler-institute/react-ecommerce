@@ -11,6 +11,7 @@ const Catalog = ({
 }) => {
 	const [products, setSaveProducts] = useState([]);
 	const url = "http://localhost:3001/products";
+
 	useEffect(() => {
 		try {
 			const fetchProducts = async () => {
@@ -23,6 +24,7 @@ const Catalog = ({
 			console.log(error);
 		}
 	}, [url]);
+
 	return (
 		<div className='catalog__container'>
 			{products.map(({ id, title, price, image }) => {
