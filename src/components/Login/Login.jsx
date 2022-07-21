@@ -20,7 +20,6 @@ export default function LoginPlain() {
 		e.preventDefault();
 		setIsLoggedIn(false);
 		setError("");
-
 		try {
 			await LoginVerification({ username, password });
 			// await console.log(LoginVerification(username, password));
@@ -78,17 +77,3 @@ export default function LoginPlain() {
 		</div>
 	);
 }
-
-// import "./Login.css";
-// import { Link } from "react-router-dom";
-// const Login = () => {
-// 	return (
-// 		<div>
-// 			This is the Login
-// 			<Link to='/'>Home</Link>
-// 			<Link to='/'>New Home</Link>
-// 		</div>
-// 	);
-// };
-
-// export default Login;
