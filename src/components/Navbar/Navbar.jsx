@@ -31,7 +31,7 @@ const Navbar = ({
 						{userCache?.username ? (
 							<User
 								as='button'
-								src='https://i.pinimg.com/280x280_RS/a5/8d/17/a58d172dd380fc5bde9b10e7bdf772ad.jpg'
+								src={userCache?.avatar}
 								name={userCache.username}
 								description=''
 							/>

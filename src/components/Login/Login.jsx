@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LoginVerification } from "../utils/utils";
+import { LoginVerification, getRandomAvatar } from "../utils/Utils";
 
 export default function LoginPlain({ userCache, setUserCache }) {
 	const [username, setUsername] = useState("");
@@ -9,22 +9,20 @@ export default function LoginPlain({ userCache, setUserCache }) {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-
 		setError("");
 		try {
 			await LoginVerification({ username, password });
-			// await console.log(LoginVerification(username, password));
+			const url = await getRandomAvatar();
 
 			setUsername("");
 			setPassword("");
 			setError("");
-			setUserCache({ username: username });
+			setUserCache({ username: username, avatar: url });
 			// navigator("/");
 		} catch (error) {
 			// do no thing for now
 			setError("Incorrect username or password!");
 		}
-
 		setIsLoading(false);
 	};
 
@@ -34,7 +32,7 @@ export default function LoginPlain({ userCache, setUserCache }) {
 				{userCache?.username ? (
 					<>
 						<h1> Hello {userCache.username}!</h1>
-						<button onClick={()=>setUserCache({})}>Log Out</button>
+						<button onClick={() => setUserCache({})}>Log Out</button>
 					</>
 				) : (
 					<form className='form' onSubmit={onSubmit}>

@@ -54,5 +54,13 @@
         "valoration": 7,
         "category":"Weapons"
       }
+  ],
+  "avatars":[
+    {
+      "url": "https://avatarfiles.alphacoders.com/685/68567.gif"
+    },
+    {
+      "url": ""
+    }
   ]
 }
