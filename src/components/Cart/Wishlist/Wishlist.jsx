@@ -4,7 +4,12 @@ import { Button, Tooltip } from "@nextui-org/react";
 
 import "./Wishlist.css";
 
-const Wishlist = ({ wishlistCart, setWishlistCart, shoppingCart,setShoppingCart}) => {
+const Wishlist = ({
+	wishlistCart,
+	setWishlistCart,
+	shoppingCart,
+	setShoppingCart,
+}) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
 	useEffect(() => {

@@ -4,7 +4,6 @@
 import React, { useState } from "react";
 import { LoginVerification } from "../utils/utils";
 import { useNavigate } from "react-router";
-import { Loading } from "@nextui-org/react";
 
 export default function LoginPlain() {
 	const [username, setUsername] = useState("");
@@ -18,8 +17,6 @@ export default function LoginPlain() {
 		e.preventDefault();
 		setIsLoggedIn(false);
 		setError("");
-    
-  
 
 		try {
 			await LoginVerification({ username, password });
@@ -29,7 +26,6 @@ export default function LoginPlain() {
 			setPassword("");
 			setError("");
 			navigator("/");
-	
 		} catch (error) {
 			// do no thing for now
 			setError("Incorrect username or password!");

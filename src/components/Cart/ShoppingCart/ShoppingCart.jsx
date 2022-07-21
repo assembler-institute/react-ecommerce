@@ -6,7 +6,12 @@ import { Button } from "@nextui-org/react";
 
 import "./ShoppingCart.css";
 
-const ShoppingCart = ({ shoppingCart, setShoppingCart, wishlistCart, setWishlistCart }) => {
+const ShoppingCart = ({
+	shoppingCart,
+	setShoppingCart,
+	wishlistCart,
+	setWishlistCart,
+}) => {
 	const [totalItemPrice, setTotalItemPrice] = useState(0);
 
 	useEffect(() => {

@@ -7,7 +7,12 @@ import Product from "../Product/Product";
 
 import "./Catalog.css";
 
-const Catalog = ({ shoppingCart, setShoppingCart, wishlistCart, setWishlistCart }) => {
+const Catalog = ({
+	shoppingCart,
+	setShoppingCart,
+	wishlistCart,
+	setWishlistCart,
+}) => {
 	const [products, setSaveProducts] = useState([]);
 
 	const url = "http://localhost:3001/products";
