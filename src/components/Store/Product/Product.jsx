@@ -1,12 +1,9 @@
-//* Is the Component will renderize the information of each product.
-//? We call useState and useEffect hooks from "react",Library.
-//? We call Card, Col, Row, Button, Text from "@nextui-org/react",Library
 import { useState, useEffect } from "react";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import "./Product.css";
 
-//* A function that returns a component.
+
 const Product = ({
 	id,
 	title,

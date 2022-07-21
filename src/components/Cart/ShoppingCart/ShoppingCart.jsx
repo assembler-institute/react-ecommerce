@@ -1,11 +1,10 @@
-//* Cart component that renderizes CartItem component.
 import CartItem from "../CartItem/CartItem";
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import "./ShoppingCart.css";
 
 
-//* A function that returns a JSX element. */
+
 const ShoppingCart = ({
 	shoppingCart,
 	setShoppingCart,

@@ -1,20 +1,18 @@
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
 import Wishlist from "../Cart/Wishlist/Wishlist";
-import Login from "../../components/Login/Login"
+import Login from "../../components/Login/Login";
 import { Popover, User, Button } from "@nextui-org/react";
 import Heart from "../../assets/icons/Heart2.svg";
 import Buy from "../../assets/icons/Buy.svg";
-import { UserTwitterCard } from "./Avatar/Avatar";
 import "./Navbar.css";
-
-//* It's a function that returns a div with a logo, links, and icons.
-//* @returns A React component.
 
 const Navbar = ({
 	shoppingCart,
 	setShoppingCart,
 	wishlistCart,
 	setWishlistCart,
+	userCache,
+	setUserCache,
 }) => {
 	return (
 		<div className='navbar__container'>
@@ -30,18 +28,24 @@ const Navbar = ({
 			<div className='navbar__container_icons'>
 				<Popover>
 					<Popover.Trigger>
-						<User
-							as='button'
-							src='https://i.pinimg.com/280x280_RS/a5/8d/17/a58d172dd380fc5bde9b10e7bdf772ad.jpg'
-							name='Login'
-							description=''
-						/>
+						{userCache?.username ? (
+							<User
+								as='button'
+								src='https://i.pinimg.com/280x280_RS/a5/8d/17/a58d172dd380fc5bde9b10e7bdf772ad.jpg'
+								name={userCache.username}
+								description=''
+							/>
+						) : (
+							<Button color='warning' light>
+								Login
+							</Button>
+						)}
 					</Popover.Trigger>
 					<Popover.Content css={{ px: "$4", py: "$2" }}>
-					<Login />
+						<Login userCache={userCache} setUserCache={setUserCache} />
 					</Popover.Content>
 				</Popover>
-				
+
 				<Popover>
 					<Popover.Trigger>
 						<Button

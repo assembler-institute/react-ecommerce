@@ -1,33 +1,25 @@
-//* Component Login to move user with "Link component from "react-router-dom,library"
-//? We use Link component from "react-router-dom", Library to move USERS to one specific point of the project.
 import React, { useState } from "react";
 import { LoginVerification } from "../utils/utils";
-import { useNavigate } from "react-router";
 
-export default function LoginPlain() {
+export default function LoginPlain({ userCache, setUserCache }) {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-	const navigator = useNavigate();
-
-	//* The function is a React component that renders a form that takes in a username and password, and
-	//* then sends a POST request to the server to verify the user's credentials. If the credentials are
-	//* correct, the user is logged in. If the credentials are incorrect, the user is not logged in.
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		setIsLoggedIn(false);
+
 		setError("");
 		try {
 			await LoginVerification({ username, password });
 			// await console.log(LoginVerification(username, password));
-			setIsLoggedIn(true);
+
 			setUsername("");
 			setPassword("");
 			setError("");
-			navigator("/");
+			setUserCache({ username: username });
+			// navigator("/");
 		} catch (error) {
 			// do no thing for now
 			setError("Incorrect username or password!");
@@ -39,16 +31,10 @@ export default function LoginPlain() {
 	return (
 		<div className='Login'>
 			<div className='Login-container'>
-				{isLoggedIn ? (
+				{userCache?.username ? (
 					<>
-						<h1> Hello {username}!</h1>{" "}
-						<button
-							onClick={() => {
-								setIsLoggedIn(false);
-							}}
-						>
-							Log Out
-						</button>
+						<h1> Hello {userCache.username}!</h1>
+						<button onClick={()=>setUserCache({})}>Log Out</button>
 					</>
 				) : (
 					<form className='form' onSubmit={onSubmit}>
