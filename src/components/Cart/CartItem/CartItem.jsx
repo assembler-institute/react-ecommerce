@@ -30,7 +30,6 @@ const CartItem = ({
 		});
 		setShoppingCart([...shoppingCart]);
 	};
-
 	/*
 	 * If the itemId of the item in the shoppingCart array is equal to the itemId of the item that was
 	 * clicked, then add 1 to the itemQuantity of that item.
@@ -114,7 +113,6 @@ const CartItem = ({
 							</Button>
 						</>
 					)}
-
 					<Button light color='error' auto onClick={itemRemove}>
 						Remove
 					</Button>

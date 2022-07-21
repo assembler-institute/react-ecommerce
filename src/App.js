@@ -7,7 +7,9 @@ import BottomSection from "./components/Footer/BottomSection/BottomSection";
 
 import "./App.css";
 
+
 const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
+const wishlistStorage = JSON.parse(localStorage.getItem("saveWishCache")) || [];
 
 //* The App function is the main component of the application. It holds the state of the shopping cart
 //* and wishlist cart, and passes them down to the Navbar and Catalog components.
@@ -15,11 +17,15 @@ const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
 
 function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
-	const [wishlistCart, setWishlistCart] = useState([]);
+	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);
 
 	useEffect(() => {
 		localStorage.setItem("saveCache", JSON.stringify(shoppingCart));
 	}, [shoppingCart]);
+
+	useEffect(() => {
+		localStorage.setItem("saveWishCache", JSON.stringify(wishlistCart));
+	}, [wishlistCart]);
 
 	return (
 		<div className='main__app'>
