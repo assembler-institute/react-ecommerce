@@ -1,5 +1,8 @@
 import "./BottomSection.css";
 
+//* It returns a div with a paragraph and an unordered list.
+//* @returns A div with a p and an unordered list.
+
 const BottomSection = () => {
 	return (
 		<div className='footer__container'>

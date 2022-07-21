@@ -3,6 +3,7 @@
 import { Button } from "@nextui-org/react";
 import "./CartItem.css";
 
+//* A function that takes in the following parameters:
 const CartItem = ({
 	itemId,
 	itemTitle,
@@ -15,6 +16,11 @@ const CartItem = ({
 	wishlistCart,
 	setWishlistCart,
 }) => {
+	/*
+	 * If the item quantity is 1, return. Otherwise, find the item in the shopping cart and decrement its
+	 * quantity. Then, set the shopping cart to the new shopping cart.
+	 * @returns the value of the itemQuantity property of the item object.*/
+
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;
 		shoppingCart.forEach((item) => {
@@ -25,6 +31,10 @@ const CartItem = ({
 		setShoppingCart([...shoppingCart]);
 	};
 
+	/*
+	 * If the itemId of the item in the shoppingCart array is equal to the itemId of the item that was
+	 * clicked, then add 1 to the itemQuantity of that item.
+	 */
 	const addQuantityItem = () => {
 		shoppingCart.forEach((item) => {
 			if (item.itemId === itemId) {
@@ -34,6 +44,10 @@ const CartItem = ({
 		setShoppingCart([...shoppingCart]);
 	};
 
+	/*
+	 * If the item is in the wishlist, remove it from the wishlist. If the item is in the shopping cart,
+	 * remove it from the shopping cart.
+	 */
 	const itemRemove = () => {
 		if (wish) {
 			const newWishList = wishlistCart.filter(
@@ -46,6 +60,11 @@ const CartItem = ({
 		}
 	};
 
+	/*
+	 * If the itemId of the item in the shoppingCart array is the same as the itemId of the item that was
+	 * clicked, then return true.
+	 * @returns the value of the variable noItemInShoppingCart.
+	 */
 	const checkShoppingCart = () => {
 		let noItemInShoppingCart = false;
 		shoppingCart.forEach((item) => {

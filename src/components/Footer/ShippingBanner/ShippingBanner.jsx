@@ -1,14 +1,10 @@
-/* Importing the css file for the component. */
 import "./ShippingBanner.css";
-
-/* Importing the shopping cart icon from the react-icons library. */
 import { FaShoppingBag } from "react-icons/fa";
 
-/**
- * It returns a div with a className of freeShipping__container, which contains a div with a
- * FontAwesome icon and a span with some text.
- * @returns A React component.
- */
+//* It returns a div with two spans inside. The first span contains a FontAwesome icon, the second span
+//* contains a string.
+//* @returns A div with two spans inside.
+
 const ShippingBanner = () => {
 	return (
 		<div className='freeShipping__container'>

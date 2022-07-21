@@ -1,6 +1,5 @@
 //* Component Login to move user with "Link component from "react-router-dom,library"
 //? We use Link component from "react-router-dom", Library to move USERS to one specific point of the project.
-
 import React, { useState } from "react";
 import { LoginVerification } from "../utils/utils";
 import { useNavigate } from "react-router";
@@ -12,6 +11,10 @@ export default function LoginPlain() {
 	const [error, setError] = useState("");
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const navigator = useNavigate();
+
+	//* The function is a React component that renders a form that takes in a username and password, and
+	//* then sends a POST request to the server to verify the user's credentials. If the credentials are
+	//* correct, the user is logged in. If the credentials are incorrect, the user is not logged in.
 
 	const onSubmit = async (e) => {
 		e.preventDefault();

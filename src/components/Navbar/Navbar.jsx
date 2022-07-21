@@ -6,6 +6,9 @@ import Buy from "../../assets/icons/Buy.svg";
 import { UserTwitterCard } from "./Avatar/Avatar";
 import "./Navbar.css";
 
+//* It's a function that returns a div with a logo, links, and icons.
+//* @returns A React component.
+
 const Navbar = ({
 	shoppingCart,
 	setShoppingCart,

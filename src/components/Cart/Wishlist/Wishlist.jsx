@@ -4,6 +4,7 @@ import { Button, Tooltip } from "@nextui-org/react";
 
 import "./Wishlist.css";
 
+//* A function that is returning a div. */
 const Wishlist = ({
 	wishlistCart,
 	setWishlistCart,
