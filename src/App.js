@@ -10,7 +10,6 @@ const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
 const wishlistStorage = JSON.parse(localStorage.getItem("saveWishCache")) || [];
 const userCacheStorage = JSON.parse(localStorage.getItem("userCache")) || {};
 
-
 function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);

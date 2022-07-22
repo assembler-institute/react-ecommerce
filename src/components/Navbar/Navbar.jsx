@@ -27,7 +27,6 @@ const Navbar = ({
 				<span className='navbar__container_link'>BLOG</span>
 			</div>
 
-
 			<div className='navbar__container_icons'>
 				<Popover>
 					<Popover.Trigger>
@@ -43,7 +42,7 @@ const Navbar = ({
 								Login
 							</Button>
 						)}
-						
+
 					</Popover.Trigger>
 					<Popover.Content css={{ px: "$4", py: "$2" }}>
 						<Login userCache={userCache} setUserCache={setUserCache} />

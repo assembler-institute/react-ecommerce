@@ -1,4 +1,4 @@
-const apiKey = "i1JImrnGOrm98w5JuTFpDyff4yMPnJR3";
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export async function LoginVerification({ username, password }) {
 	return new Promise((resolve, reject) => {
@@ -21,10 +21,8 @@ const fetchData = async () => {
 };
 
 export const getRandomAvatar = async () => {
-	const data = await fetchData()
-	const rand = Math.round(Math.random()*25)
+	const data = await fetchData();
+	const rand = Math.round(Math.random() * 25);
 	const url = data.data[rand].images.original.url;
 	return url;
 };
-
-
