@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LoginVerification, getRandomAvatar } from "../utils/Utils";
+import { LoginVerification, getRandomAvatar } from "../Utils/Utils";
 
 export default function LoginPlain({ userCache, setUserCache }) {
 	const [username, setUsername] = useState("");
@@ -10,6 +10,8 @@ export default function LoginPlain({ userCache, setUserCache }) {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		setError("");
+
+
 		try {
 			await LoginVerification({ username, password });
 			const url = await getRandomAvatar();
@@ -18,9 +20,7 @@ export default function LoginPlain({ userCache, setUserCache }) {
 			setPassword("");
 			setError("");
 			setUserCache({ username: username, avatar: url });
-			// navigator("/");
 		} catch (error) {
-			// do no thing for now
 			setError("Incorrect username or password!");
 		}
 		setIsLoading(false);

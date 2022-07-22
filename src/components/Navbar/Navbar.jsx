@@ -42,8 +42,9 @@ const Navbar = ({
 								Login
 							</Button>
 						)}
-
 					</Popover.Trigger>
+
+					
 					<Popover.Content css={{ px: "$4", py: "$2" }}>
 						<Login userCache={userCache} setUserCache={setUserCache} />
 					</Popover.Content>
