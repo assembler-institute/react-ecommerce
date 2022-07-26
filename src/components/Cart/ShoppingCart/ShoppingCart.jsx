@@ -83,7 +83,7 @@ const ShoppingCart = ({
 				color='warning'
 				auto
 				onClick={handleCheckout}
-				disabled={isLoading}
+				disabled={isLoading || shoppingCart.length === 0}
 			>
 				{isLoading ? <Loading type='points' color='warning' /> : "Checkout"}
 			</Button>
