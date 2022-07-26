@@ -92,7 +92,6 @@ const Product = ({
 					<Text h3 color='#CE7500' size={20} weight='bold'>
 						{title}
 					</Text>
-
 				</Col>
 			</Card.Header>
 			<Card.Body css={{ p: 0 }}>
@@ -123,7 +122,7 @@ const Product = ({
 							€ {price}
 						</Text>
 					</Col>
-					
+
 					<Col>
 						<Row justify='flex-end'>
 							<Button color='warning' auto ghost disabled={itemAdded}>

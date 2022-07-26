@@ -11,7 +11,6 @@ export default function LoginPlain({ userCache, setUserCache }) {
 		e.preventDefault();
 		setError("");
 
-
 		try {
 			await LoginVerification({ username, password });
 			const url = await getRandomAvatar();
