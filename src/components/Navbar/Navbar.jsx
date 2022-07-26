@@ -13,6 +13,7 @@ const Navbar = ({
 	setWishlistCart,
 	userCache,
 	setUserCache,
+	notifyToast,
 }) => {
 
 	return (
@@ -63,6 +64,7 @@ const Navbar = ({
 							shoppingCart={shoppingCart}
 							setShoppingCart={setShoppingCart}
 							userCache={userCache}
+							notifyToast={notifyToast}
 						/>
 					</Popover.Content>
 				</Popover>

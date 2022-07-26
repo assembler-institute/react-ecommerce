@@ -1,14 +1,20 @@
-import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Catalog from "./components/Store/Catalog/Catalog";
 import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
 import Services from "./components/Footer/Services/Services";
 import BottomSection from "./components/Footer/BottomSection/BottomSection";
+import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 
 const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
 const wishlistStorage = JSON.parse(localStorage.getItem("saveWishCache")) || [];
 const userCacheStorage = JSON.parse(localStorage.getItem("userCache")) || {};
+
+const notifyToast = (message, error = false) => {
+	if (error) return toast.error(message);
+	toast.success(message);
+};
 
 function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
@@ -36,6 +42,7 @@ function App() {
 				setWishlistCart={setWishlistCart}
 				userCache={userCache}
 				setUserCache={setUserCache}
+				notifyToast={notifyToast}
 			/>
 			<Catalog
 				shoppingCart={shoppingCart}
@@ -46,6 +53,8 @@ function App() {
 			<ShippingBanner />
 			<Services />
 			<BottomSection />
+			<Toaster position="top-right"
+  reverseOrder={true}/>
 		</div>
 	);
 }
