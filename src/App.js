@@ -54,7 +54,7 @@ function App() {
 			<ShippingBanner />
 			<Services />
 			<BottomSection />
-			<Toaster position='top-right' reverseOrder={true} />
+			<Toaster position='top-left' reverseOrder={false} />
 		</div>
 	);
 }

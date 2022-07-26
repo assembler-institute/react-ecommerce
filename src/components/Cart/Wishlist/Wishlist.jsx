@@ -48,7 +48,7 @@ const Wishlist = ({
 			<div className='cart__bottom'>
 				<Tooltip
 					placement='bottom'
-					content='Your Total Love List'
+					content='Items on your Wishlist!'
 					color='warning'
 				>
 					<Button flat auto color='warning'>

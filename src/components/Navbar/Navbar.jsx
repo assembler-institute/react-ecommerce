@@ -17,7 +17,9 @@ const Navbar = ({
 }) => {
 	return (
 		<div className='navbar__container'>
-			<div className='navbar__container_logo'>Logo</div>
+			<div className='navbar__container_logo'>
+				<img alt='logo' src={require("../../assets/img/a.png")}></img>
+			</div>
 			<div className='navbar__container_links'>
 				<span className='navbar__container_link'>DEMO</span>
 				<span className='navbar__container_link'>SHOP</span>

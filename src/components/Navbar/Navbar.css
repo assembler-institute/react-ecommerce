@@ -1,19 +1,27 @@
 .navbar__container {
 	display: flex;
-	height: 5vh;
-	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px solid black;
+	height: 5vh;
+	width: 100%;
+	border-top: 1px solid black;
 }
 
 .navbar__container_logo {
-	margin-left: 2rem;
+	width: 50%;
 }
 
 .navbar__container_icons {
 	display: flex;
-	flex-direction: row;
+	align-items: center;
+	padding-right: 2rem;
+	gap: 2vw;
 	margin-right: 2rem;
-	gap: 1rem;
+}
+
+.navbar__container_links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2vw;
 }
