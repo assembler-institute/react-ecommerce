@@ -62,6 +62,7 @@ const Navbar = ({
 						<ShoppingCart
 							shoppingCart={shoppingCart}
 							setShoppingCart={setShoppingCart}
+							userCache={userCache}
 						/>
 					</Popover.Content>
 				</Popover>
