@@ -15,7 +15,6 @@ const Navbar = ({
 	setUserCache,
 	notifyToast,
 }) => {
-
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>Logo</div>
@@ -45,7 +44,6 @@ const Navbar = ({
 						)}
 					</Popover.Trigger>
 
-					
 					<Popover.Content css={{ px: "$4", py: "$2" }}>
 						<Login userCache={userCache} setUserCache={setUserCache} />
 					</Popover.Content>
@@ -83,6 +81,7 @@ const Navbar = ({
 							setWishlistCart={setWishlistCart}
 							shoppingCart={shoppingCart}
 							setShoppingCart={setShoppingCart}
+							notifyToast={notifyToast}
 						/>
 					</Popover.Content>
 				</Popover>

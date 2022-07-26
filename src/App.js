@@ -49,12 +49,12 @@ function App() {
 				setShoppingCart={setShoppingCart}
 				wishlistCart={wishlistCart}
 				setWishlistCart={setWishlistCart}
+				notifyToast={notifyToast}
 			/>
 			<ShippingBanner />
 			<Services />
 			<BottomSection />
-			<Toaster position="top-right"
-  reverseOrder={true}/>
+			<Toaster position='top-right' reverseOrder={true} />
 		</div>
 	);
 }

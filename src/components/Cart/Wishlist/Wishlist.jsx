@@ -8,6 +8,7 @@ const Wishlist = ({
 	setWishlistCart,
 	shoppingCart,
 	setShoppingCart,
+	notifyToast,
 }) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 

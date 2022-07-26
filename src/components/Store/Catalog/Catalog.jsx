@@ -8,6 +8,7 @@ const Catalog = ({
 	setShoppingCart,
 	wishlistCart,
 	setWishlistCart,
+	notifyToast,
 }) => {
 	const [products, setSaveProducts] = useState([]);
 	const url = "http://localhost:3001/products";
@@ -39,6 +40,7 @@ const Catalog = ({
 						setShoppingCart={setShoppingCart}
 						wishlistCart={wishlistCart}
 						setWishlistCart={setWishlistCart}
+						notifyToast={notifyToast}
 					/>
 				);
 			})}

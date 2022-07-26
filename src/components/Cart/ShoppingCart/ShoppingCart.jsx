@@ -4,7 +4,12 @@ import { Button, Loading } from "@nextui-org/react";
 
 import "./ShoppingCart.css";
 
-const ShoppingCart = ({ shoppingCart, setShoppingCart, userCache, notifyToast }) => {
+const ShoppingCart = ({
+	shoppingCart,
+	setShoppingCart,
+	userCache,
+	notifyToast,
+}) => {
 	const [totalItemPrice, setTotalItemPrice] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -19,10 +24,10 @@ const ShoppingCart = ({ shoppingCart, setShoppingCart, userCache, notifyToast })
 	}, [shoppingCart]);
 
 	const handleCheckout = () => {
-    if (userCache.username === undefined) {
-      notifyToast('You need to be authenticated!', true);
-      return;
-    }
+		if (userCache.username === undefined) {
+			notifyToast("You need to Login!", true);
+			return;
+		}
 		setIsLoading(true);
 		fetch("http://localhost:4242/create-checkout-session", {
 			method: "POST",
@@ -82,7 +87,6 @@ const ShoppingCart = ({ shoppingCart, setShoppingCart, userCache, notifyToast })
 			>
 				{isLoading ? <Loading type='points' color='warning' /> : "Checkout"}
 			</Button>
-			<button onClick={()=>notifyToast('Need checkout')}>test</button>
 		</div>
 	);
 };

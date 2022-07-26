@@ -16,6 +16,7 @@ const Product = ({
 	setWishlistCart,
 	menuState,
 	setMenu,
+	notifyToast,
 }) => {
 	const [itemAdded, setItemAdded] = useState(false);
 	const [wishlistAdded, setWishlistAdded] = useState(false);
@@ -31,7 +32,7 @@ const Product = ({
 				itemQuantity: 1,
 			},
 		]);
-		// setItemAdded(true);
+		notifyToast(`${title} Added to the Cart!`);
 	};
 
 	const addToWishlistCart = () => {
@@ -45,7 +46,7 @@ const Product = ({
 				itemQuantity: 1,
 			},
 		]);
-		// setItemAdded(true);
+		notifyToast(`${title} Added to the Wishlist!`);
 	};
 
 	useEffect(() => {
