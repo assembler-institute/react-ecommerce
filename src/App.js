@@ -4,6 +4,7 @@ import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
 import Services from "./components/Footer/Services/Services";
 import BottomSection from "./components/Footer/BottomSection/BottomSection";
 import { useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 
@@ -20,6 +21,9 @@ function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);
 	const [userCache, setUserCache] = useState(userCacheStorage);
+const paymentRedirection = useLocation();
+console.log(paymentRedirection);
+
 
 	useEffect(() => {
 		localStorage.setItem("saveCache", JSON.stringify(shoppingCart));
@@ -32,6 +36,14 @@ function App() {
 	useEffect(() => {
 		localStorage.setItem("userCache", JSON.stringify(userCache));
 	}, [userCache]);
+
+	useEffect(() => {
+if(paymentRedirection.pathname === "/cancel"){
+	notifyToast("Payment process Cancel!")
+} else if (paymentRedirection.pathname === "/success"){
+	notifyToast("Payment process Sucess!")
+}
+	},[paymentRedirection.pathname]);
 
 	return (
 		<div className='main__app'>
