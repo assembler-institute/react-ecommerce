@@ -4,7 +4,7 @@ import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
 import Services from "./components/Footer/Services/Services";
 import BottomSection from "./components/Footer/BottomSection/BottomSection";
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 
@@ -21,8 +21,8 @@ function App() {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);
 	const [userCache, setUserCache] = useState(userCacheStorage);
-const paymentRedirection = useLocation();
-console.log(paymentRedirection);
+	const paymentRedirection = useLocation();
+	const navigator = useNavigate();
 
 
 	useEffect(() => {
@@ -38,12 +38,16 @@ console.log(paymentRedirection);
 	}, [userCache]);
 
 	useEffect(() => {
-if(paymentRedirection.pathname === "/cancel"){
-	notifyToast("Payment process Cancel!")
-} else if (paymentRedirection.pathname === "/success"){
-	notifyToast("Payment process Sucess!")
-}
-	},[paymentRedirection.pathname]);
+		if (paymentRedirection.pathname === "/cancel") {
+			navigator("/")
+			notifyToast("Process Cancelled!");
+		} else if (paymentRedirection.pathname === "/success") {
+			navigator("/")
+			notifyToast(`${userCache.username} congratulations you payment process is done!`);
+			setShoppingCart([]);
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	},[]);
 
 	return (
 		<div className='main__app'>
