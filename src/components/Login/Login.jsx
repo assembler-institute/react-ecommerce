@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { LoginVerification, getRandomAvatar } from "../Utils/Utils";
+import { useContext } from "react";
+import { UserDataContext } from "../../context/UserDataContext";
 
-export default function LoginPlain({ userCache, setUserCache }) {
+
+
+export default function LoginPlain() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
-
+	const { userCache, setUserCache } = useContext(UserDataContext);
+	
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		setError("");

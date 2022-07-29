@@ -5,17 +5,21 @@ import { Popover, User, Button } from "@nextui-org/react";
 import Heart from "../../assets/icons/Heart2.svg";
 import Buy from "../../assets/icons/Buy.svg";
 import "./Navbar.css";
+import { useContext } from "react";
+import { UserDataContext } from "../../context/UserDataContext";
+
+
 
 const Navbar = ({
 	shoppingCart,
 	setShoppingCart,
 	wishlistCart,
 	setWishlistCart,
-	userCache,
-	setUserCache,
 	notifyToast,
 }) => {
+	const { userCache, setUserCache } = useContext(UserDataContext);
 	return (
+		
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>
 				<img alt='logo' src={require("../../assets/img/a.png")}></img>

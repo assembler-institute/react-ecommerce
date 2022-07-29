@@ -1,9 +1,11 @@
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login.jsx";
+import { UserDataContextProvider } from "./context/UserDataContext";
 
 const Router = () => {
 	return (
+		<UserDataContextProvider>
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<App />} />
@@ -14,6 +16,7 @@ const Router = () => {
 			<Route path='/login' element={<Login />} />
 			</Routes>
 		</BrowserRouter>
+		</UserDataContextProvider>
 	);
 };
 
