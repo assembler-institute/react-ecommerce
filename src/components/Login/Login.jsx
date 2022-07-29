@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { LoginVerification, getRandomAvatar } from "../Utils/Utils";
-import { useContext } from "react";
 import { UserDataContext } from "../../context/UserDataContext";
 
 export default function LoginPlain() {

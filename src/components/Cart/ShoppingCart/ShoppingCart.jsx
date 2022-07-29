@@ -1,6 +1,6 @@
 import CartItem from "../CartItem/CartItem";
-import { useState, useEffect, useContext } from "react";
 import { UserDataContext } from "../../../context/UserDataContext";
+import { useState, useEffect, useContext } from "react";
 import { Button, Loading } from "@nextui-org/react";
 import "./ShoppingCart.css";
 

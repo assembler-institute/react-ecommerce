@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { User, Row, Col, Text, Button, Spacer, Grid } from "@nextui-org/react";
 
 export const UserTwitterCard = () => {
-	const [following, setFollowing] = React.useState(false);
+	const [following, setFollowing] = useState(false);
 
 	return (
 		<Grid.Container

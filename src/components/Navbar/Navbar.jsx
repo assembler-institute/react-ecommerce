@@ -1,12 +1,12 @@
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
 import Wishlist from "../Cart/Wishlist/Wishlist";
 import Login from "../../components/Login/Login";
+import { useContext } from "react";
+import { UserDataContext } from "../../context/UserDataContext";
 import { Popover, User, Button } from "@nextui-org/react";
 import Heart from "../../assets/icons/Heart2.svg";
 import Buy from "../../assets/icons/Buy.svg";
 import "./Navbar.css";
-import { useContext } from "react";
-import { UserDataContext } from "../../context/UserDataContext";
 
 const Navbar = ({
 	shoppingCart,

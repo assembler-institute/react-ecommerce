@@ -1,6 +1,6 @@
 import App from "./App";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserDataContextProvider } from "./context/UserDataContext";
 
 const Router = () => {
