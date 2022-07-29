@@ -8,8 +8,6 @@ import "./Navbar.css";
 import { useContext } from "react";
 import { UserDataContext } from "../../context/UserDataContext";
 
-
-
 const Navbar = ({
 	shoppingCart,
 	setShoppingCart,
@@ -19,7 +17,6 @@ const Navbar = ({
 }) => {
 	const { userCache, setUserCache } = useContext(UserDataContext);
 	return (
-		
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>
 				<img alt='logo' src={require("../../assets/img/a.png")}></img>

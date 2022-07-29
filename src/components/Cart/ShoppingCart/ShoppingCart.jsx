@@ -4,11 +4,7 @@ import { UserDataContext } from "../../../context/UserDataContext";
 import { Button, Loading } from "@nextui-org/react";
 import "./ShoppingCart.css";
 
-const ShoppingCart = ({
-	shoppingCart,
-	setShoppingCart,
-	notifyToast,
-}) => {
+const ShoppingCart = ({ shoppingCart, setShoppingCart, notifyToast }) => {
 	const { userCache } = useContext(UserDataContext);
 	const [totalItemPrice, setTotalItemPrice] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
