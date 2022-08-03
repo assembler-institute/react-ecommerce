@@ -16,7 +16,6 @@ const useRegisterAuth = () => {
 		try {
 			await LoginVerification({ username, password });
 			const url = await getRandomAvatar();
-
 			setUsername("");
 			setPassword("");
 			setError("");
