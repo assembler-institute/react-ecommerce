@@ -1,13 +1,14 @@
-import Navbar from "./components/Navbar/Navbar";
-import Catalog from "./components/Store/Catalog/Catalog";
-import ShippingBanner from "./components/Footer/ShippingBanner/ShippingBanner";
-import Services from "./components/Footer/Services/Services";
-import BottomSection from "./components/Footer/BottomSection/BottomSection";
-import { UserDataContext } from "./context/UserDataContext";
+import Navbar from "../../components/Navbar/Navbar";
+import Catalog from "../../components/Store/Catalog/Catalog";
+import ShippingBanner from "../../components/Footer/ShippingBanner/ShippingBanner";
+import Services from "../../components/Footer/Services/Services";
+import BottomSection from "../../components/Footer/BottomSection/BottomSection";
+import { UserDataContext } from "../../context/UserDataContext";
 import { useEffect, useState, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import "./App.css";
+
+import "./Home.css";
 
 const initialStorage = JSON.parse(localStorage.getItem("saveCache")) || [];
 const wishlistStorage = JSON.parse(localStorage.getItem("saveWishCache")) || [];
@@ -17,7 +18,7 @@ const notifyToast = (message, error = false) => {
 	toast.success(message);
 };
 
-function App() {
+const Home = () => {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);
 	const { userCache } = useContext(UserDataContext);
@@ -68,6 +69,6 @@ function App() {
 			<Toaster position='top-left' reverseOrder={false} />
 		</div>
 	);
-}
+};
 
-export default App;
+export default Home;

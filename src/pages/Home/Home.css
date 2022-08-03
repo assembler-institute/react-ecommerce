@@ -1,8 +1,4 @@
-@import url("./assets/css/reset.css");
-
-.App {
-	text-align: center;
-}
+@import url("../../assets/css/reset.css");
 
 .main__app {
 	display: flex;

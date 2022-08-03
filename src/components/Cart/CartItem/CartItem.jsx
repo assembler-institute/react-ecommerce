@@ -1,7 +1,6 @@
 import { Button } from "@nextui-org/react";
 import "./CartItem.css";
 
-//* A function that takes in the following parameters:
 const CartItem = ({
 	itemId,
 	itemTitle,
