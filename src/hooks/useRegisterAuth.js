@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { LoginVerification, getRandomAvatar } from "../helpers/utils/Utils";
+import { LoginVerification, getRandomAvatar } from "../utils/helpers/Utils";
 import { UserDataContext } from "../contexts/UserDataContext";
 
 const useRegisterAuth = () => {
