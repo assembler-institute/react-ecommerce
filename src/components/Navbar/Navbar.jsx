@@ -1,6 +1,7 @@
 import ShoppingCart from "../Cart/ShoppingCart/ShoppingCart";
 import Wishlist from "../Cart/Wishlist/Wishlist";
 import Login from "../../components/Login/Login";
+import useRegisterAuth from "../../hooks/useRegisterAuth";
 import { useContext } from "react";
 import { UserDataContext } from "../../contexts/UserDataContext";
 import { Popover, User, Button } from "@nextui-org/react";
@@ -16,6 +17,7 @@ const Navbar = ({
 	notifyToast,
 }) => {
 	const { userCache, setUserCache } = useContext(UserDataContext);
+	const { signInWithGoogle } = useRegisterAuth();
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>
@@ -37,8 +39,8 @@ const Navbar = ({
 							<User
 								as='button'
 								src={userCache?.avatar}
-								name={userCache.username}
-								description=''
+								name={userCache?.name ? userCache?.name : userCache.username}
+								description={userCache?.name ? userCache.username : ''}
 							/>
 						) : (
 							<Button color='warning' light>
@@ -48,6 +50,17 @@ const Navbar = ({
 					</Popover.Trigger>
 
 					<Popover.Content css={{ px: "$4", py: "$2" }}>
+						<div>
+							{!userCache?.username && (
+								<button
+									className='login-with-google-btn'
+									onClick={signInWithGoogle}
+								>
+									Sign in with Google
+								</button>
+							)}
+						</div>
+
 						<Login userCache={userCache} setUserCache={setUserCache} />
 					</Popover.Content>
 				</Popover>
