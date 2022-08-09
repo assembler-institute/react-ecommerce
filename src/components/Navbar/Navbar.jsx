@@ -40,7 +40,7 @@ const Navbar = ({
 								as='button'
 								src={userCache?.avatar}
 								name={userCache?.name ? userCache?.name : userCache.username}
-								description={userCache?.name ? userCache.username : ''}
+								description={userCache?.name ? userCache.username : ""}
 							/>
 						) : (
 							<Button color='warning' light>
