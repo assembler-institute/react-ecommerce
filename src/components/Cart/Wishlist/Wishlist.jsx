@@ -4,25 +4,24 @@ import { Button, Tooltip } from "@nextui-org/react";
 import "./Wishlist.css";
 
 const Wishlist = ({
-	wishlistCart,
-	setWishlistCart,
 	shoppingCart,
 	setShoppingCart,
-	notifyToast,
+	dispatch,
+	wishListCart,
 }) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
 	useEffect(() => {
-		let totalOfWhislistArrayItems = wishlistCart.length;
+		let totalOfWhislistArrayItems = wishListCart.length;
 		setTotalItemWishlist(totalOfWhislistArrayItems);
-	}, [wishlistCart]);
+	}, [wishListCart]);
 
 	return (
 		<div className='main__cart'>
 			<h3>Whislist Cart</h3>
 			<ul className='cart__list'>
-				{wishlistCart.length > 0 ? (
-					wishlistCart.map(
+				{wishListCart.length > 0 ? (
+					wishListCart.map(
 						({ itemId, itemTitle, itemPrice, itemImage, itemQuantity }) => {
 							return (
 								<CartItem
@@ -32,8 +31,8 @@ const Wishlist = ({
 									itemPrice={itemPrice}
 									itemImage={itemImage}
 									itemQuantity={itemQuantity}
-									wishlistCart={wishlistCart}
-									setWishlistCart={setWishlistCart}
+									wishListCart={wishListCart}
+									dispatch={dispatch}
 									shoppingCart={shoppingCart}
 									setShoppingCart={setShoppingCart}
 									wish={true}

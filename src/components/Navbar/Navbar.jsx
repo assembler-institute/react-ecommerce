@@ -12,12 +12,13 @@ import "./Navbar.css";
 const Navbar = ({
 	shoppingCart,
 	setShoppingCart,
-	wishlistCart,
-	setWishlistCart,
 	notifyToast,
+	dispatch,
+	wishListCart,
 }) => {
 	const { userCache, setUserCache } = useContext(UserDataContext);
 	const { signInWithGoogle } = useRegisterAuth();
+
 	return (
 		<div className='navbar__container'>
 			<div className='navbar__container_logo'>
@@ -93,8 +94,8 @@ const Navbar = ({
 					</Popover.Trigger>
 					<Popover.Content css={{ width: "max-content" }}>
 						<Wishlist
-							wishlistCart={wishlistCart}
-							setWishlistCart={setWishlistCart}
+							dispatch={dispatch}
+							wishListCart={wishListCart}
 							shoppingCart={shoppingCart}
 							setShoppingCart={setShoppingCart}
 							notifyToast={notifyToast}

@@ -4,8 +4,9 @@ import ShippingBanner from "../../components/Footer/ShippingBanner/ShippingBanne
 import Services from "../../components/Footer/Services/Services";
 import BottomSection from "../../components/Footer/BottomSection/BottomSection";
 import ImageCarousel from "../../components/Store/ImageGallery/ImageCarousel";
+import { wishlistReducer } from "../../reducer/wishlistReducer";
 import { UserDataContext } from "../../contexts/UserDataContext";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, useReducer } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import "./Home.css";
@@ -20,7 +21,7 @@ const notifyToast = (message, error = false) => {
 
 const Home = () => {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
-	const [wishlistCart, setWishlistCart] = useState(wishlistStorage);
+	const [wishListCart, dispatch] = useReducer(wishlistReducer, wishlistStorage);
 	const { userCache } = useContext(UserDataContext);
 	const paymentRedirection = useLocation();
 	const navigator = useNavigate();
@@ -30,8 +31,8 @@ const Home = () => {
 	}, [shoppingCart]);
 
 	useEffect(() => {
-		localStorage.setItem("saveWishCache", JSON.stringify(wishlistCart));
-	}, [wishlistCart]);
+		localStorage.setItem("saveWishCache", JSON.stringify(wishListCart));
+	}, [wishListCart]);
 
 	useEffect(() => {
 		if (paymentRedirection.pathname === "/cancel") {
@@ -52,16 +53,16 @@ const Home = () => {
 			<Navbar
 				shoppingCart={shoppingCart}
 				setShoppingCart={setShoppingCart}
-				wishlistCart={wishlistCart}
-				setWishlistCart={setWishlistCart}
 				notifyToast={notifyToast}
+				dispatch={dispatch}
+				wishListCart={wishListCart}
 			/>
 			<ImageCarousel />
 			<Catalog
 				shoppingCart={shoppingCart}
 				setShoppingCart={setShoppingCart}
-				wishlistCart={wishlistCart}
-				setWishlistCart={setWishlistCart}
+				dispatch={dispatch}
+				wishListCart={wishListCart}
 				notifyToast={notifyToast}
 			/>
 			<ShippingBanner />

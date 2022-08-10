@@ -5,8 +5,8 @@ import "./Catalog.css";
 const Catalog = ({
 	shoppingCart,
 	setShoppingCart,
-	wishlistCart,
-	setWishlistCart,
+	dispatch,
+	wishListCart,
 	notifyToast,
 }) => {
 	const [products, setSaveProducts] = useState([]);
@@ -37,8 +37,8 @@ const Catalog = ({
 						image={image}
 						shoppingCart={shoppingCart}
 						setShoppingCart={setShoppingCart}
-						wishlistCart={wishlistCart}
-						setWishlistCart={setWishlistCart}
+						dispatch={dispatch}
+						wishListCart={wishListCart}
 						notifyToast={notifyToast}
 					/>
 				);

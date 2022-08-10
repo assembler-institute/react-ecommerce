@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/react";
+import { ACTIONS } from "../../../reducer/wishlistReducer";
 import "./CartItem.css";
 
 const CartItem = ({
@@ -10,8 +11,8 @@ const CartItem = ({
 	setShoppingCart,
 	itemQuantity,
 	wish,
-	wishlistCart,
-	setWishlistCart,
+	wishListCart,
+	dispatch,
 }) => {
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;
@@ -34,10 +35,10 @@ const CartItem = ({
 
 	const itemRemove = () => {
 		if (wish) {
-			const newWishList = wishlistCart.filter(
-				(wishItem) => wishItem.itemId !== itemId,
-			);
-			setWishlistCart(newWishList);
+			dispatch({
+				type: ACTIONS.REMOVE_FROM_WISH_LIST,
+				payload: { itemId: itemId },
+			});
 		} else {
 			const newCart = shoppingCart.filter((item) => item.itemId !== itemId);
 			setShoppingCart(newCart);

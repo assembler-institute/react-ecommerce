@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { ACTIONS } from "../../../reducer/wishlistReducer";
 import "./Product.css";
 
 const Product = ({
@@ -12,8 +13,8 @@ const Product = ({
 	description,
 	shoppingCart,
 	setShoppingCart,
-	wishlistCart,
-	setWishlistCart,
+	dispatch,
+	wishListCart,
 	menuState,
 	setMenu,
 	notifyToast,
@@ -36,21 +37,21 @@ const Product = ({
 	};
 
 	const addToWishlistCart = () => {
-		setWishlistCart([
-			...wishlistCart,
-			{
+		dispatch({
+			type: ACTIONS.ADD_TO_WISH_LIST,
+			payload: {
 				itemId: id,
 				itemTitle: title,
 				itemPrice: price,
 				itemImage: image,
 				itemQuantity: 1,
 			},
-		]);
+		});
 		notifyToast(`${title} Added to the Wishlist!`);
 	};
 
 	useEffect(() => {
-		const result = wishlistCart.some((item) => {
+		const result = wishListCart.some((item) => {
 			if (item.itemId === id) {
 				return true;
 			}
@@ -58,7 +59,7 @@ const Product = ({
 		});
 		result && setWishlistAdded(true);
 		!result && setWishlistAdded(false);
-	}, [id, wishlistCart]);
+	}, [id, wishListCart]);
 
 	useEffect(() => {
 		const resutl = shoppingCart.some((product) => {
@@ -123,7 +124,6 @@ const Product = ({
 							€ {price}
 						</Text>
 					</Col>
-
 					<Col>
 						<Row justify='flex-end'>
 							<Button color='warning' auto ghost disabled={itemAdded}>
