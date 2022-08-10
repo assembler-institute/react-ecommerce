@@ -33,7 +33,7 @@ const Product = ({
 				itemQuantity: 1,
 			},
 		]);
-		notifyToast(`${title} Added to the Cart!`);
+		notifyToast(`${title} Added to the Shopping Cart!`);
 	};
 
 	const addTowishlistCart = () => {
