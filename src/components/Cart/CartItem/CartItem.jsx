@@ -12,7 +12,6 @@ const CartItem = ({
 	wish,
 	wishlistCart,
 	setWishlistCart,
-
 }) => {
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;

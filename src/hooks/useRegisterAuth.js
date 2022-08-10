@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
-import { LoginVerification, getRandomAvatar } from "../utils/helpers/Utils";
+import { LoginVerification, getRandomAvatar } from "../helpers/utils/Utils";
 import { UserDataContext } from "../contexts/UserDataContext";
-import { auth, provider } from "../firebase-config";
+import { auth, provider } from "../config/firebase-config";
 import { signInWithPopup } from "firebase/auth";
 
 const useRegisterAuth = () => {
