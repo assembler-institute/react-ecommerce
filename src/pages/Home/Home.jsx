@@ -4,7 +4,7 @@ import ShippingBanner from "../../components/Footer/ShippingBanner/ShippingBanne
 import Services from "../../components/Footer/Services/Services";
 import BottomSection from "../../components/Footer/BottomSection/BottomSection";
 import ImageCarousel from "../../components/Store/ImageGallery/ImageCarousel";
-import { wishlistReducer } from "../../reducer/wishlistReducer";
+import { wishlistReducer } from "../../reducers/wishlistReducer";
 import { UserDataContext } from "../../contexts/UserDataContext";
 import { useEffect, useState, useContext, useReducer } from "react";
 import { useLocation, useNavigate } from "react-router-dom";

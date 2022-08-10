@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react";
-import { ACTIONS } from "../../../reducer/wishlistReducer";
+import { ACTIONS } from "../../../reducers/wishlistReducer";
 import "./CartItem.css";
 
 const CartItem = ({

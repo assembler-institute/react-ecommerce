@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { ACTIONS } from "../../../reducer/wishlistReducer";
+import { ACTIONS } from "../../../reducers/wishlistReducer";
 import "./Product.css";
 
 const Product = ({
