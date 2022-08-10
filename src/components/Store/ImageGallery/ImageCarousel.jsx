@@ -16,13 +16,12 @@ function ImageCarousel() {
 	];
 
 	return (
-		<div className="carousel_container">
+		<div className='carousel_container'>
 			<ImageGallery
 				items={images}
 				autoPlay={true}
 				showBullets={true}
 				showPlayButton={true}
-
 				slideDuration={2000}
 				slideInterval={4000}
 			/>

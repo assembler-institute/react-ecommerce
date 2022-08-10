@@ -56,6 +56,7 @@ const Home = () => {
 				setWishlistCart={setWishlistCart}
 				notifyToast={notifyToast}
 			/>
+			<ImageCarousel />
 			<Catalog
 				shoppingCart={shoppingCart}
 				setShoppingCart={setShoppingCart}
@@ -64,7 +65,6 @@ const Home = () => {
 				notifyToast={notifyToast}
 			/>
 			<ShippingBanner />
-			<ImageCarousel />
 			<Services />
 			<BottomSection />
 			<Toaster position='top-left' reverseOrder={false} />

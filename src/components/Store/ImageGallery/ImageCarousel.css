@@ -1,10 +1,6 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-/* .image-gallery-image {
-	padding: 0;
-	width: 100%;
-} */
-
-.carousel_container {
-	width: 100%;
+.image-gallery-slide .image-gallery-image {
+	height: 30vh;
+	object-fit: cover;
 }
