@@ -13,6 +13,7 @@ const CartItem = ({
 	wish,
 	wishlistCart,
 	dispatch,
+	notifyToast,
 }) => {
 	const restQuantityItem = () => {
 		if (itemQuantity === 1) return;
@@ -50,9 +51,10 @@ const CartItem = ({
 		shoppingCart.forEach((item) => {
 			if (item.itemId === itemId) {
 				noItemInShoppingCart = true;
+				notifyToast("Already added to Shopping Cart", true);
 			}
 		});
-		console.log(noItemInShoppingCart);
+
 		return noItemInShoppingCart;
 	};
 

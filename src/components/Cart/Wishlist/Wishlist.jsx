@@ -8,6 +8,7 @@ const Wishlist = ({
 	setShoppingCart,
 	dispatch,
 	wishlistCart,
+	notifyToast
 }) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
@@ -35,6 +36,7 @@ const Wishlist = ({
 									dispatch={dispatch}
 									shoppingCart={shoppingCart}
 									setShoppingCart={setShoppingCart}
+									notifyToast={notifyToast}
 									wish={true}
 								/>
 							);
