@@ -11,7 +11,7 @@ const CartItem = ({
 	setShoppingCart,
 	itemQuantity,
 	wish,
-	wishListCart,
+	wishlistCart,
 	dispatch,
 }) => {
 	const restQuantityItem = () => {

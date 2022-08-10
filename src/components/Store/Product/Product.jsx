@@ -14,7 +14,7 @@ const Product = ({
 	shoppingCart,
 	setShoppingCart,
 	dispatch,
-	wishListCart,
+	wishlistCart,
 	menuState,
 	setMenu,
 	notifyToast,
@@ -36,7 +36,7 @@ const Product = ({
 		notifyToast(`${title} Added to the Cart!`);
 	};
 
-	const addToWishlistCart = () => {
+	const addTowishlistCart = () => {
 		dispatch({
 			type: ACTIONS.ADD_TO_WISH_LIST,
 			payload: {
@@ -51,7 +51,7 @@ const Product = ({
 	};
 
 	useEffect(() => {
-		const result = wishListCart.some((item) => {
+		const result = wishlistCart.some((item) => {
 			if (item.itemId === id) {
 				return true;
 			}
@@ -59,7 +59,7 @@ const Product = ({
 		});
 		result && setWishlistAdded(true);
 		!result && setWishlistAdded(false);
-	}, [id, wishListCart]);
+	}, [id, wishlistCart]);
 
 	useEffect(() => {
 		const resutl = shoppingCart.some((product) => {
@@ -82,7 +82,7 @@ const Product = ({
 					<Button
 						color='error'
 						light
-						onClick={addToWishlistCart}
+						onClick={addTowishlistCart}
 						disabled={wishlistAdded}
 					>
 						{wishlistAdded ? (

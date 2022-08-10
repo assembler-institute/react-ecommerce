@@ -21,7 +21,7 @@ const notifyToast = (message, error = false) => {
 
 const Home = () => {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
-	const [wishListCart, dispatch] = useReducer(wishlistReducer, wishlistStorage);
+	const [wishlistCart, dispatch] = useReducer(wishlistReducer, wishlistStorage);
 	const { userCache } = useContext(UserDataContext);
 	const paymentRedirection = useLocation();
 	const navigator = useNavigate();
@@ -31,8 +31,8 @@ const Home = () => {
 	}, [shoppingCart]);
 
 	useEffect(() => {
-		localStorage.setItem("saveWishCache", JSON.stringify(wishListCart));
-	}, [wishListCart]);
+		localStorage.setItem("saveWishCache", JSON.stringify(wishlistCart));
+	}, [wishlistCart]);
 
 	useEffect(() => {
 		if (paymentRedirection.pathname === "/cancel") {
@@ -55,14 +55,14 @@ const Home = () => {
 				setShoppingCart={setShoppingCart}
 				notifyToast={notifyToast}
 				dispatch={dispatch}
-				wishListCart={wishListCart}
+				wishlistCart={wishlistCart}
 			/>
 			<ImageCarousel />
 			<Catalog
 				shoppingCart={shoppingCart}
 				setShoppingCart={setShoppingCart}
 				dispatch={dispatch}
-				wishListCart={wishListCart}
+				wishlistCart={wishlistCart}
 				notifyToast={notifyToast}
 			/>
 			<ShippingBanner />

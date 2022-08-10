@@ -14,7 +14,7 @@ const Navbar = ({
 	setShoppingCart,
 	notifyToast,
 	dispatch,
-	wishListCart,
+	wishlistCart,
 }) => {
 	const { userCache, setUserCache } = useContext(UserDataContext);
 	const { signInWithGoogle } = useRegisterAuth();
@@ -95,7 +95,7 @@ const Navbar = ({
 					<Popover.Content css={{ width: "max-content" }}>
 						<Wishlist
 							dispatch={dispatch}
-							wishListCart={wishListCart}
+							wishlistCart={wishlistCart}
 							shoppingCart={shoppingCart}
 							setShoppingCart={setShoppingCart}
 							notifyToast={notifyToast}

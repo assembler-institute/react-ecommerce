@@ -7,21 +7,21 @@ const Wishlist = ({
 	shoppingCart,
 	setShoppingCart,
 	dispatch,
-	wishListCart,
+	wishlistCart,
 }) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
 	useEffect(() => {
-		let totalOfWhislistArrayItems = wishListCart.length;
+		let totalOfWhislistArrayItems = wishlistCart.length;
 		setTotalItemWishlist(totalOfWhislistArrayItems);
-	}, [wishListCart]);
+	}, [wishlistCart]);
 
 	return (
 		<div className='main__cart'>
 			<h3>Whislist Cart</h3>
 			<ul className='cart__list'>
-				{wishListCart.length > 0 ? (
-					wishListCart.map(
+				{wishlistCart.length > 0 ? (
+					wishlistCart.map(
 						({ itemId, itemTitle, itemPrice, itemImage, itemQuantity }) => {
 							return (
 								<CartItem
@@ -31,7 +31,7 @@ const Wishlist = ({
 									itemPrice={itemPrice}
 									itemImage={itemImage}
 									itemQuantity={itemQuantity}
-									wishListCart={wishListCart}
+									wishlistCart={wishlistCart}
 									dispatch={dispatch}
 									shoppingCart={shoppingCart}
 									setShoppingCart={setShoppingCart}

@@ -6,7 +6,7 @@ const Catalog = ({
 	shoppingCart,
 	setShoppingCart,
 	dispatch,
-	wishListCart,
+	wishlistCart,
 	notifyToast,
 }) => {
 	const [products, setSaveProducts] = useState([]);
@@ -38,7 +38,7 @@ const Catalog = ({
 						shoppingCart={shoppingCart}
 						setShoppingCart={setShoppingCart}
 						dispatch={dispatch}
-						wishListCart={wishListCart}
+						wishlistCart={wishlistCart}
 						notifyToast={notifyToast}
 					/>
 				);

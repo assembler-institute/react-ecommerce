@@ -4,11 +4,11 @@ export const ACTIONS = {
 	ADD_WISH_TO_CART: "ADD_WISH_TO_CART",
 };
 
-export const wishlistReducer = (wishListCart, action) => {
+export const wishlistReducer = (wishlistCart, action) => {
 	switch (action.type) {
 		case ACTIONS.ADD_TO_WISH_LIST:
 			return [
-				...wishListCart,
+				...wishlistCart,
 				{
 					itemId: action.payload.itemId,
 					itemTitle: action.payload.itemTitle,
@@ -19,12 +19,12 @@ export const wishlistReducer = (wishListCart, action) => {
 			];
 
 		case ACTIONS.REMOVE_FROM_WISH_LIST:
-			const newWishListCart = wishListCart.filter(
+			const newwishlistCart = wishlistCart.filter(
 				(wishItem) => wishItem.itemId !== action.payload.itemId,
 			);
-			return newWishListCart;
+			return newwishlistCart;
 
 		default:
-			return wishListCart;
+			return wishlistCart;
 	}
 };
