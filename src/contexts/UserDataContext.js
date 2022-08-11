@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 
-
 export const UserDataContext = createContext({});
 const userCacheStorage = JSON.parse(localStorage.getItem("userCache")) || {};
 

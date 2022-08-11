@@ -12,6 +12,7 @@ const Wishlist = ({
 }) => {
 	const [totalItemWishlist, setTotalItemWishlist] = useState(0);
 
+	/* A hook that is used to update the state of the component. */
 	useEffect(() => {
 		let totalOfWhislistArrayItems = wishlistCart.length;
 		setTotalItemWishlist(totalOfWhislistArrayItems);

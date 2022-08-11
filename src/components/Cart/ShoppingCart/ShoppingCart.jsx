@@ -9,6 +9,7 @@ const ShoppingCart = ({ shoppingCart, setShoppingCart, notifyToast }) => {
 	const [totalItemPrice, setTotalItemPrice] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
 
+	/* A hook that is called when the component is mounted and when the shoppingCart is updated. */
 	useEffect(() => {
 		let sumTotalItemPrice = 0;
 		shoppingCart.forEach((item) => {

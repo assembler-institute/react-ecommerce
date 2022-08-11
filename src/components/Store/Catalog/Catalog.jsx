@@ -13,6 +13,7 @@ const Catalog = ({
 	const [products, setSaveProducts] = useState([]);
 	const url = "http://localhost:3001/products";
 
+	/* Fetching data from the API and setting it to the state. */
 	useEffect(() => {
 		try {
 			const fetchProducts = async () => {
