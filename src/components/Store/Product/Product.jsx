@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { ACTIONS } from "../../../reducers/wishlistReducer";
@@ -97,6 +98,7 @@ const Product = ({
 				</Col>
 			</Card.Header>
 			<Card.Body css={{ p: 0 }}>
+				<Link to={`/productpage/${id}`}> 
 				<Card.Image
 					src={image}
 					width='100%'
@@ -104,6 +106,7 @@ const Product = ({
 					objectFit='cover'
 					alt='Card example background'
 				/>
+				</Link>
 			</Card.Body>
 			<Card.Footer
 				isBlurred

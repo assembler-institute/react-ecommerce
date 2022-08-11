@@ -49,6 +49,16 @@
 			"image": "https://cdn.webshopapp.com/shops/184325/files/95278907/enso-martial-arts-shop-yellow-bruce-lee-nunchaku.jpg",
 			"valoration": 7,
 			"category": "Weapons"
+		},
+		{
+			"id": 6,
+			"title": "Figure",
+			"price": 160,
+			"amount": 20,
+			"description": "Bruce Lee 1/6 Scale 75th Anniversary Figure",
+			"image": "https://d3nt9em9l1urz8.cloudfront.net/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/t/o/todec182502u_4.jpg",
+			"valoration": 7,
+			"category": "Figures"
 		}
 	],
 	"avatars": [
