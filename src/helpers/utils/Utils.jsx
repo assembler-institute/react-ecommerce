@@ -1,5 +1,10 @@
 const apiKey = process.env.REACT_APP_API_KEY;
 
+/**
+ * This function will return a promise that will resolve if the username and password are correct, and
+ * reject if they are not.
+ * @returns A promise.
+ */
 export async function LoginVerification({ username, password }) {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {

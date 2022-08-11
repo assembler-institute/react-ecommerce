@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import "./ProductPage.css"
 
+
+/* This is the React Hooks syntax for setting the state of the component. */
 const ProductPage = () => {
 	const [productPage, setProductPage] = useState({});
 	const url = "http://localhost:3001/products";
 	const { id: productId } = useParams();
 
+	/* Fetching the data from the API and filtering it by the productId. */
 	useEffect(() => {
 		try {
 			const fetchProducts = async () => {

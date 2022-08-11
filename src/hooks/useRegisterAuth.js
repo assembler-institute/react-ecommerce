@@ -4,6 +4,20 @@ import { UserDataContext } from "../contexts/UserDataContext";
 import { auth, provider } from "../config/firebase-config";
 import { signInWithPopup } from "firebase/auth";
 
+/**
+ * It's a custom hook that handles the login process
+ * @returns An object with the following properties:
+ * userCache,
+ * setUserCache,
+ * error,
+ * onSubmit,
+ * isLoading,
+ * setPassword,
+ * setUsername,
+ * username,
+ * password,
+ * signInWithGoogle,
+ */
 const useRegisterAuth = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");

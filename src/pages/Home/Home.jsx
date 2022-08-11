@@ -19,6 +19,12 @@ const notifyToast = (message, error = false) => {
 	toast.success(message);
 };
 
+/**
+ * It's a React component that renders a Navbar, ImageCarousel, Catalog, ShippingBanner, Services,
+ * BottomSection, and Toaster components
+ * @returns A div with a Navbar, ImageCarousel, Catalog, ShippingBanner, Services, BottomSection, and
+ * Toaster.
+ */
 const Home = () => {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, dispatch] = useReducer(wishlistReducer, wishlistStorage);
