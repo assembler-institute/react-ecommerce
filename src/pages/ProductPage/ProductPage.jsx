@@ -23,7 +23,6 @@ const ProductPage = () => {
 
 	return (
 		<>
-			<h1>{productPage.title}</h1>
 			<figure>
 				<img src={productPage.image} alt='' />
 				<figcaption>{productPage.title}</figcaption>

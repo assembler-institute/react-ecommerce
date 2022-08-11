@@ -98,14 +98,14 @@ const Product = ({
 				</Col>
 			</Card.Header>
 			<Card.Body css={{ p: 0 }}>
-				<Link to={`/productpage/${id}`}> 
-				<Card.Image
-					src={image}
-					width='100%'
-					height='100%'
-					objectFit='cover'
-					alt='Card example background'
-				/>
+				<Link to={`/productpage/${id}`}>
+					<Card.Image
+						src={image}
+						width='100%'
+						height='100%'
+						objectFit='cover'
+						alt='Card example background'
+					/>
 				</Link>
 			</Card.Body>
 			<Card.Footer
