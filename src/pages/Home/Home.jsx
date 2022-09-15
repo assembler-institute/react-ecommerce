@@ -1,9 +1,13 @@
 import Navbar from "../../components/Navbar/Navbar";
-import Catalog from "../../components/Store/Catalog/Catalog";
+import ImageCarousel from "../../components/Store/ImageGallery/ImageCarousel";
 import ShippingBanner from "../../components/Footer/ShippingBanner/ShippingBanner";
+import SelectFighter from "../../components/SelectFigther/SelectFigther";
+import Catalog from "../../components/Store/Catalog/Catalog";
+import PresentationVideo from "../../components/PresentationVideo/PresentationVideo";
 import Services from "../../components/Footer/Services/Services";
 import BottomSection from "../../components/Footer/BottomSection/BottomSection";
-import ImageCarousel from "../../components/Store/ImageGallery/ImageCarousel";
+import Sponsors from "../../components/Sponsors/Sponsors";
+import Ranking from "../../components/Ranking/Ranking";
 import { wishlistReducer } from "../../reducers/wishlistReducer";
 import { UserDataContext } from "../../contexts/UserDataContext";
 import { useEffect, useState, useContext, useReducer } from "react";
@@ -19,12 +23,6 @@ const notifyToast = (message, error = false) => {
 	toast.success(message);
 };
 
-/**
- * It's a React component that renders a Navbar, ImageCarousel, Catalog, ShippingBanner, Services,
- * BottomSection, and Toaster components
- * @returns A div with a Navbar, ImageCarousel, Catalog, ShippingBanner, Services, BottomSection, and
- * Toaster.
- */
 const Home = () => {
 	const [shoppingCart, setShoppingCart] = useState(initialStorage);
 	const [wishlistCart, dispatch] = useReducer(wishlistReducer, wishlistStorage);
@@ -64,6 +62,8 @@ const Home = () => {
 				wishlistCart={wishlistCart}
 			/>
 			<ImageCarousel />
+			<Services />
+			<SelectFighter />
 			<Catalog
 				shoppingCart={shoppingCart}
 				setShoppingCart={setShoppingCart}
@@ -71,8 +71,10 @@ const Home = () => {
 				wishlistCart={wishlistCart}
 				notifyToast={notifyToast}
 			/>
+			<PresentationVideo />
+			<Sponsors />
 			<ShippingBanner />
-			<Services />
+			<Ranking />
 			<BottomSection />
 			<Toaster position='top-left' reverseOrder={false} />
 		</div>

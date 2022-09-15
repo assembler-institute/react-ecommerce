@@ -46,3 +46,70 @@
 	justify-content: space-between;
 	padding: 0;
 }
+
+.nextui-c-PJLV-ibuVDQa-css {
+	color: whitesmoke;
+	font-size: 18px;
+	font-family: "Poppins";
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.nextui-c-PJLV-ifpbLBb-css {
+	font-family: "Roboto";
+	color: #f80246;
+}
+.nextui-c-PJLV-ieBTzhq-css {
+	color: whitesmoke;
+	margin: inherit;
+	text-transform: uppercase;
+	font-family: "Poppins";
+	font-weight: 400;
+}
+
+.nextui-c-PJLV-ikzZBhP-css {
+	color: white;
+	font-size: 12px;
+	margin: inherit;
+	text-transform: uppercase;
+	font-family: "Roboto";
+}
+
+.nextui-c-iWjDFM-idzcxgB-css {
+	background: transparent;
+	color: #f31460;
+}
+
+.product__search {
+	background: transparent;
+	color: #f31460;
+	border: 0;
+	padding: 0px;
+}
+
+.nextui-c-dfbgCO-ijakZJF-css {
+	justify-content: space-between;
+}
+
+.nextui-c-jxECYO {
+	padding: 0px;
+}
+
+.shop_Now {
+	background: transparent;
+	border: 1px solid #f80246;
+	border-radius: 20px 0px 20px 0px;
+}
+
+.shop_Now :hover {
+	color: #f80246;
+}
+
+.nextui-c-BDLTQ-ichiZSV-css {
+	width: 85%;
+	height: 350px;
+	padding-bottom: 40px;
+	border-radius: 42px 22px 30px 28px;
+	box-shadow: 8px 31px 30px #00000030;
+	border-bottom: 12px #f80246 ridge;
+}

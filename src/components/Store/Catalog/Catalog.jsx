@@ -1,31 +1,26 @@
 import { useEffect, useState } from "react";
-
 import Product from "../Product/Product";
+
 import "./Catalog.css";
 
 const Catalog = ({
 	shoppingCart,
 	setShoppingCart,
-	dispatch,
 	wishlistCart,
+	setWishlistCart,
 	notifyToast,
+	dispatch,
 }) => {
 	const [products, setSaveProducts] = useState([]);
-	const url = "http://localhost:3001/products";
 
-	/* Fetching data from the API and setting it to the state. */
 	useEffect(() => {
-		try {
-			const fetchProducts = async () => {
-				const response = await fetch(url);
-				const data = await response.json();
-				setSaveProducts(data);
-			};
-			fetchProducts();
-		} catch (error) {
-			console.log(error);
-		}
-	}, [url]);
+		const fetchProducts = async () => {
+			const response = await fetch("http://localhost:3001/products");
+			const data = await response.json();
+			setSaveProducts(data);
+		};
+		fetchProducts();
+	}, []);
 
 	return (
 		<div className='catalog__container'>
@@ -39,9 +34,10 @@ const Catalog = ({
 						image={image}
 						shoppingCart={shoppingCart}
 						setShoppingCart={setShoppingCart}
-						dispatch={dispatch}
 						wishlistCart={wishlistCart}
+						setWishlistCart={setWishlistCart}
 						notifyToast={notifyToast}
+						dispatch={dispatch}
 					/>
 				);
 			})}
