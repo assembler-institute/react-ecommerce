@@ -1,7 +1,8 @@
 
 import './App.css';
 import ListaDeTareas from './components/ListaDeTareas';
-import Wishlist from './components/Wishlist';
+import {Route} from "react-router-dom"
+
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div>
         <h1>Wishlist</h1>
         <ListaDeTareas/>
+
       </div>
       
     </div>
