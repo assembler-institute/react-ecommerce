@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import "../styles/TareaFormulario.css"
 import { v4 as uuidv4 } from 'uuid';
-import Segunda from "./Segunda";
+import { Link } from "react-router-dom";
 
 function TareaFormulario(props){
     const[input,setInput] = useState("");
@@ -33,7 +33,7 @@ return(
 
     </form>
     
-    <button to={<Segunda/>}>ALL Finished</button>
+    <button ><Link to="/next" className="next__page--btn">ALL Finished</Link></button>
     </>
     
 );

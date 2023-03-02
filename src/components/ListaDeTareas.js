@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import TareaFormulario from './TareaFormulario'
 import "../styles/ListaDeTareas.css"
 import Tarea from "./Wishlist"
+import Segunda from './Segunda'
 
 export default function ListaDeTareas() {   
     
@@ -17,7 +18,7 @@ export default function ListaDeTareas() {
 
     const eliminarTarea=id=>{
         const tareasActualizadas=tareas.filter(tarea => tarea.id !==id);
-        setTareas(tareasActualizadas);
+        localStorage.setTareas(tareasActualizadas);
     }
 
     const completarTarea=id=>{
@@ -27,8 +28,11 @@ export default function ListaDeTareas() {
             }
             return tarea;
         })
-        setTareas();
+       setTareas(tareasActualizadas);
+        
     }
+    const finish =document.querySelector(".finished__task--p")
+    
     return (
     <>
      <TareaFormulario onSubmit={agregarTarea}/>

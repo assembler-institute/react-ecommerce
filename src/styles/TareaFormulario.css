@@ -24,3 +24,6 @@
     text-transform: capitalize;
 
 }
+.next__page--btn{
+    text-decoration: none;
+}
