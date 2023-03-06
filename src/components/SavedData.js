@@ -1,16 +1,16 @@
-import React,{useState,useEffect} from 'react'
+// import React,{useState,useEffect} from 'react'
 
 
-export default function SavedData() {
+// export default function SavedData() {
 
-    const [save,setSave]=useState("");
+//     const [save,setSave]=useState("");
 
-    const getData=()=>{
-        return localStorage.setTareas(tareasActualizadas);
-    }
-    useEffect( ()=>{
-setSave(getData () );
-    } ,  [])
+//     const getData=()=>{
+//         return localStorage.setTareas(tareasActualizadas);
+//     }
+//     useEffect( ()=>{
+// setSave(getData () );
+//     } ,  [])
 
 
-}
+// }

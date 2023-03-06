@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import TareaFormulario from './TareaFormulario'
 import "../styles/ListaDeTareas.css"
 import Tarea from "./Wishlist"
-import Segunda from './Segunda'
+
 
 export default function ListaDeTareas() {   
     
@@ -18,7 +18,7 @@ export default function ListaDeTareas() {
 
     const eliminarTarea=id=>{
         const tareasActualizadas=tareas.filter(tarea => tarea.id !==id);
-        localStorage.setTareas(tareasActualizadas);
+       setTareas(tareasActualizadas);
     }
 
     const completarTarea=id=>{
