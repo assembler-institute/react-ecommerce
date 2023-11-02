@@ -1,0 +1,12 @@
+.finished__tasks--div{
+    min-height: 80vh;
+    width: 400vh;
+    background-color: black;
+}
+.all__page--div{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+
+}

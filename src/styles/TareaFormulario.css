@@ -1,0 +1,29 @@
+.tarea-formulario{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarea-input{
+    width: 300px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid green;
+}
+
+.tarea-boton{
+
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: green;
+    color: aliceblue;
+    text-transform: capitalize;
+
+}
+.next__page--btn{
+    text-decoration: none;
+}
